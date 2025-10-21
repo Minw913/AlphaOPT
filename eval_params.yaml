@@ -1,0 +1,15 @@
+dataset: mamo_easy
+data_path: ./data/optimization_tasks/clean/mamo_easy.json
+library_path: ./data/experience_library/iterations/train_data_4o_new_json/library_refine_iter2.json
+output_folder: ${dataset}_main
+model: openai/gpt-4o
+service: openrouter # null
+temperature: 0.0
+pass_at_k: 1
+
+ablation:
+  taxonomy: true              # Whether to enable taxonomy-based retrieval
+  rewrite: true              # Whether to enable insight rewriting
+  include_example: false       # Whether to include insight examples
+  include_program_insight: true  # Whether to include code implementation insight
+  max_debug_retry: 5          # Whether to enable self-debug and number of times

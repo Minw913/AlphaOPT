@@ -1,0 +1,36 @@
+base_model: google/gemini-2.5-flash # openai/gpt-4o
+advanced_model: openai/gpt-4o # gemini-2.5-pro openai/gpt-4o-mini
+base_service: openrouter # openrouter # null for direct API calls
+advanced_service: openrouter #openrouter # openrouter for advanced model
+verbose: false
+start_iter: 3
+data_slice: 
+
+# API Keys
+api_keys:
+  OPEN_ROUTER_KEY:   # Set your OpenRouter API key here
+  GEMINI_API_KEY:    # Set your Gemini API key here
+  OPENAI_API_KEY:    # Set your OpenAI API key here 
+
+params:
+  num_iterations: 4
+  batch_size: 12
+  tolerance: 0.1
+  max_solution_attempts: 3
+  max_verify_attempts: 3
+  variant_num: 5  # the number of refined condition 
+  
+dataset: train_data_4o_new_400
+output_folder: train_data_4o_new_400_verify
+file_paths:
+  train_data_path: ./data/optimization_tasks/train/${dataset}.json
+  train_output_dir: ./learning/${output_folder}/
+  lib_dir: ./data/experience_library/iterations/${output_folder}/
+  metrics_log_path: ./learning/${output_folder}/iteration_metrics.json
+
+ablation:
+  taxonomy: true                 # Whether to enable taxonomy-based retrieval
+  rewrite: false                 # Whether to enable insight rewriting
+  include_example: true          # Whether to include insight examples
+  include_program_insight: true  # Whether to include code implementation insight
+  max_debug_retry: 3             # Whether to enable self-debug and number of times

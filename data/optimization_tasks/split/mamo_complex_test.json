@@ -1,0 +1,750 @@
+[
+  {
+    "task_id": "E104",
+    "description": "A company produces two kinds of products. A product of the first type requires 1/4 hours of assembly labor, 1/8 hours of testing, and $1.2 worth of raw materials. A product of the second type requires 1/3 hours of assembly, 1/3 hours of testing, and $0.9 worth of raw materials. Given the current personnel of the company, there can be at most 90 hours of assembly labor and 80 hours of testing each day. Suppose that up to 50 hours of overtime assembly labor can be scheduled, at a cost of $7 per hour. Products of the first and second type have a market value of $9 and $8 respectively. Try to maximize the daily profit of the company. Provide your answer rounded to the nearest dollar.",
+    "ground_truth": 4018.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Production Planning",
+        "modeling_type": "LP",
+        "industry_sector": "Manufacturing",
+        "reason": "The problem involves determining optimal production quantities of two products to maximize profit, subject to resource constraints (labor, testing, raw materials), which is characteristic of production planning. The relationships are linear, and variables are continuous (implicitly, as production can be fractional in LP context), making it a Linear Programming problem. The context of producing physical goods with labor and materials clearly falls under manufacturing."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E089",
+    "description": "SupplyTek is a retail supply company that needs to optimize its distribution network. The company has four retail stores that require supply from a choice of seven possible distribution centers. Each center comes with its own opening cost and a limit on how much it can supply. The cost of transporting goods from these centers to the retail stores varies. The objective is to meet the demand at each retail store at the minimum possible total cost, which includes the opening costs of the distribution centers and the transportation costs of the goods.\n\nGiven Data:\n- Number of Potential Distribution Centers: 7\n- Number of Retail Stores Needing Supply: 4\n\nOpening Costs for Each Distribution Center (in dollars):\n- Center 1: 151,000\n- Center 2: 192,000\n- Center 3: 114,000\n- Center 4: 171,000\n- Center 5: 160,000\n- Center 6: 120,000\n- Center 7: 182,000\n\nTransportation Cost Per Unit from Each Distribution Center to Retail Stores (in dollars):\n- From Center 1: $3 to Store 1, $3 to Store 2, $5 to Store 3, $4 to Store 4\n- From Center 2: $3 to Store 1, $5 to Store 2, $2 to Store 3, $4 to Store 4\n- From Center 3: $2 to Store 1, $4 to Store 2, $5 to Store 3, $1 to Store 4\n- From Center 4: $4 to Store 1, $2 to Store 2, $5 to Store 3, $4 to Store 4\n- From Center 5: $1 to Store 1, $1 to Store 2, $3 to Store 3, $3 to Store 4\n- From Center 6: $2 to Store 1, $4 to Store 2, $4 to Store 3, $3 to Store 4\n- From Center 7: $4 to Store 1, $4 to Store 2, $1 to Store 3, $3 to Store 4\n\nDemand of Each Retail Store (in units):\n- Store 1: 884\n- Store 2: 420\n- Store 3: 566\n- Store 4: 673\n\nSupply Capacity of Each Distribution Center (in units):\n- Center 1: 1187\n- Center 2: 1400\n- Center 3: 1115\n- Center 4: 813\n- Center 5: 1041\n- Center 6: 1576\n- Center 7: 1364\n\nQuestion:\nWhat is the minimum total cost for SupplyTek to open distribution centers and transport goods to meet all retail stores' demands? The total cost should include both the opening costs of the centers and the transportation costs of supplying the stores.",
+    "ground_truth": 240385.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Facility Location",
+        "modeling_type": "MILP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves deciding which distribution centers to open (a binary decision) and how much to transport from opened centers to retail stores to meet demand, minimizing total costs. This is a classic fixed-charge facility location problem, formulated as a Mixed-Integer Linear Program, within the retail industry sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E016",
+    "description": "Imagine you're a student living on a tight budget, but you're committed to maintaining a healthy, balanced diet. You've got five potential food items to select from: Steak, Apples, Eggs, Chicken, and Tofu. Each of these offers specific amounts of protein, carbohydrates, and calories, and of course, they each come at a certain cost. \n\nHere's a brief overview of what each food offers and its cost:\n\n- Steak: Provides you with 1 gram of protein, 3 grams of carbohydrates, and 210 calories for $6.\n- Apples: They give you 7 grams of protein, 22 grams of carbohydrates, and 96 calories for just $1.\n- Eggs: Deliver 6 grams of protein, 18 grams of carbohydrates, and 189 calories for only $1.\n- Chicken: It's a protein powerhouse with 20 grams of protein, but only 6 grams of carbohydrates, and it provides you 132 calories for $3.\n- Tofu: Brings in 8 grams of protein, 4 grams of carbohydrates, and 75 calories for $1.\n\nYour dietary goals are to consume at least 87 grams of protein, 135 grams of carbohydrates, and 1926 calories in a day. Your task is to figure out what combination of these foods can meet all those nutritional requirements for the least amount of money. So, what is the least amount you would have to spend to meet your nutritional needs?",
+    "ground_truth": 14.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Blending",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves determining the optimal mix of food items to meet nutritional requirements at minimum cost, which is a classic blending problem. Since the decision variables (quantities of food items) can be continuous and all relationships are linear, it can be formulated as a Linear Program. The application directly relates to dietary planning and nutritional goals, placing it in the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E093",
+    "description": "In the bustling world of retail, SupplyChain Solutions is at a crossroads, deciding how best to structure its distribution network to efficiently supply nine retail stores scattered across the region. The company has narrowed down its choices to five potential distribution centers, each with its unique costs for opening and varying capacities for fulfilling store demands. Additionally, the transportation costs for shipping goods from these centers to the stores differ, making the decision all the more complex. The challenge lies in opening the right combination of distribution centers and planning the supply routes to minimize the total cost, which includes both the opening expenses of the distribution centers and the transportation costs of delivering goods to the stores.\n\nGiven Data:\n- Number of Potential Distribution Centers: 5\n- Number of Retail Stores to be Supplied: 9\n\nOpening Costs for Each Distribution Center (in dollars):\n- Center 1: $151,000\n- Center 2: $192,000\n- Center 3: $114,000\n- Center 4: $171,000\n- Center 5: $160,000\n\nTransportation Cost Per Unit from Each Distribution Center to Retail Stores (in dollars):\n- From Center 1: $5 to Store 1, $2 to Store 2, $3 to Store 3, $3 to Store 4, $3 to Store 5, $5 to Store 6, $4 to Store 7, $3 to Store 8, $5 to Store 9\n- From Center 2: $2 to Store 1, $4 to Store 2, $2 to Store 3, $4 to Store 4, $5 to Store 5, $1 to Store 6, $4 to Store 7, $2 to Store 8, $5 to Store 9\n- From Center 3: $4 to Store 1, $1 to Store 2, $1 to Store 3, $3 to Store 4, $3 to Store 5, $2 to Store 6, $4 to Store 7, $4 to Store 8, $3 to Store 9\n- From Center 4: $4 to Store 1, $4 to Store 2, $1 to Store 3, $3 to Store 4, $5 to Store 5, $3 to Store 6, $5 to Store 7, $1 to Store 8, $2 to Store 9\n- From Center 5: $4 to Store 1, $1 to Store 2, $4 to Store 3, $2 to Store 4, $2 to Store 5, $1 to Store 6, $2 to Store 7, $5 to Store 8, $2 to Store 9\n\nDemand of Each Retail Store (in units):\n- Store 1: 739\n- Store 2: 491\n- Store 3: 766\n- Store 4: 854\n- Store 5: 827\n- Store 6: 908\n- Store 7: 434\n- Store 8: 605\n- Store 9: 480\n\nSupply Capacity of Each Distribution Center (in units):\n- Center 1: 1,825\n- Center 2: 1,821\n- Center 3: 1,365\n- Center 4: 1,929\n- Center 5: 1,502\n\nQuestion:\nWhat is the optimal total cost for SupplyChain Solutions to open distribution centers and transport goods to meet all nine retail stores' demands, including both the opening costs of the centers and the transportation costs of supplying the stores?",
+    "ground_truth": 608437.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Facility Location",
+        "modeling_type": "MILP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves deciding which distribution centers to open (a facility location decision) and how to allocate supply to stores, minimizing total fixed opening costs and variable transportation costs. The decision variables for opening centers are binary, and the allocation variables are continuous, making it a Mixed-Integer Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E063",
+    "description": "Imagine a futuristic transportation network connecting 9 major hubs across a sprawling metropolis, each designed to swiftly move resources from the main distribution center to a critical operations base. This network is meticulously engineered with roads of varying capacities, ensuring the smooth flow of essential supplies.\n\nThe city's network is as follows, with each road's capacity measured in thousands of units of resources that can be transported per hour:\n\n- From Hub 0 (Source): Roads lead to Hub 1 (4 units), Hub 2 (7 units), Hub 3 (15 units), Hub 4 (4 units), Hub 5 (7 units), Hub 6 (2 units), Hub 7 (10 units), and Hub 8 (12 units).\n- From Hub 1: Roads lead to Hub 2 (17 units), Hub 3 (2 units), Hub 4 (5 units), Hub 5 (1 unit), Hub 6 (10 units), Hub 7 (14 units), and Hub 8 (5 units).\n- From Hub 2: Roads lead to Hub 1 (7 units), Hub 3 (17 units), Hub 4 (9 units), Hub 5 (13 units), Hub 6 (10 units), Hub 7 (7 units), and Hub 8 (5 units).\n- From Hub 3: Roads lead to Hub 1 (16 units), Hub 2 (4 units), Hub 4 (11 units), Hub 5 (9 units), Hub 6 (12 units), Hub 7 (18 units), and Hub 8 (12 units).\n- From Hub 4: Roads lead to Hub 1 (3 units), Hub 2 (0 units), Hub 3 (18 units), Hub 5 (5 units), Hub 6 (2 units), and Hub 8 (19 units).\n- From Hub 5: Roads lead to Hub 1 (15 units), Hub 2 (7 units), Hub 3 (20 units), Hub 4 (20 units), Hub 6 (20 units), Hub 7 (12 units), and Hub 8 (9 units).\n- From Hub 6: Roads lead to Hub 1 (8 units), Hub 2 (14 units), Hub 3 (13 units), Hub 4 (1 unit), Hub 5 (17 units), Hub 7 (10 units), and Hub 8 (19 units).\n- From Hub 7: Roads lead to Hub 1 (5 units), Hub 2 (5 units), Hub 3 (16 units), Hub 4 (5 units), Hub 5 (7 units), Hub 6 (3 units), and Hub 8 (19 units).\n- From Hub 8 (Destination): Roads lead back to Hub 1 (19 units), Hub 2 (18 units), Hub 3 (0 units), Hub 4 (4 units), Hub 5 (7 units), Hub 6 (1 unit), and Hub 7 (20 units).\n\nA capacity of \"0\" indicates that there is no direct road connecting those two hubs.\n\nThis complex system has been designed with an aim to maximize the resources transported from Hub 0, the primary distribution center, to Hub 8, the critical operations base, without exceeding the capacity of the roads connecting these hubs.\n\nThe challenge: What is the maximum amount of resources, in thousands of units, that can be transported from the primary distribution center (Hub 0) to the critical operations base (Hub 8) per hour?",
+    "ground_truth": 61.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Network Flow",
+        "modeling_type": "LP",
+        "industry_sector": "Transportation",
+        "reason": "The problem asks to maximize the flow of resources through a network from a source to a sink, subject to arc capacities, which is a classic maximum flow problem. This can be formulated as a Linear Program (LP). The context of moving resources between hubs in a metropolis clearly falls under the transportation sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E076",
+    "description": "Global Supply Network Inc. is at a pivotal moment in redesigning its distribution strategy to ensure efficient delivery of products to six retail stores. The decision revolves around selecting the most cost-effective combination of distribution centers from nine possible locations. Each distribution center has its unique opening cost and a maximum capacity it can supply. Furthermore, the cost of transporting goods from these centers to the retail stores varies significantly. The challenge lies in fulfilling the demand at each retail store while minimizing the overall cost, including the expenses of opening distribution centers and the transportation cost of goods.\n\nGiven Data:\n- Number of Potential Distribution Centers: 9\n- Number of Retail Stores Needing Supply: 6\n\nOpening Costs for Each Distribution Center (in dollars):\n- Center 1: 151,000\n- Center 2: 192,000\n- Center 3: 114,000\n- Center 4: 171,000\n- Center 5: 160,000\n- Center 6: 120,000\n- Center 7: 182,000\n- Center 8: 186,000\n- Center 9: 174,000\n\nTransportation Cost Per Unit from Each Distribution Center to Retail Stores (in dollars):\n- From Center 1: $3 to Store 1, $5 to Store 2, $4 to Store 3, $3 to Store 4, $5 to Store 5, $2 to Store 6\n- From Center 2: $4 to Store 1, $2 to Store 2, $4 to Store 3, $5 to Store 4, $1 to Store 5, $4 to Store 6\n- From Center 3: $2 to Store 1, $5 to Store 2, $4 to Store 3, $1 to Store 4, $1 to Store 5, $3 to Store 6\n- From Center 4: $3 to Store 1, $2 to Store 2, $4 to Store 3, $4 to Store 4, $3 to Store 5, $4 to Store 6\n- From Center 5: $4 to Store 1, $1 to Store 2, $3 to Store 3, $5 to Store 4, $3 to Store 5, $5 to Store 6\n- From Center 6: $1 to Store 1, $2 to Store 2, $4 to Store 3, $1 to Store 4, $4 to Store 5, $2 to Store 6\n- From Center 7: $2 to Store 1, $1 to Store 2, $2 to Store 3, $5 to Store 4, $2 to Store 5, $4 to Store 6\n- From Center 8: $4 to Store 1, $4 to Store 2, $4 to Store 3, $5 to Store 4, $3 to Store 5, $1 to Store 6\n- From Center 9: $4 to Store 1, $2 to Store 2, $4 to Store 3, $2 to Store 4, $2 to Store 5, $4 to Store 6\n\nDemand of Each Retail Store (in units):\n- Store 1: 876 units\n- Store 2: 801 units\n- Store 3: 955 units\n- Store 4: 561 units\n- Store 5: 601 units\n- Store 6: 669 units\n\nSupply Capacity of Each Distribution Center (in units):\n- Center 1: 1615 units\n- Center 2: 1255 units\n- Center 3: 1816 units\n- Center 4: 1095 units\n- Center 5: 1519 units\n- Center 6: 1137 units\n- Center 7: 1678 units\n- Center 8: 1876 units\n- Center 9: 1591 units\n\nQuestion:\nWhat is the optimal total cost for Global Supply Network Inc. to open the necessary distribution centers and transport goods to fully meet the demands of all six retail stores? This cost includes the opening costs of the chosen distribution centers and the transportation costs of supplying the stores.",
+    "ground_truth": 394338.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Facility Location",
+        "modeling_type": "MILP",
+        "industry_sector": "Supply Chain",
+        "reason": "The problem involves selecting which distribution centers to open (a binary decision) and determining the flow of goods from opened centers to retail stores to meet demand, minimizing total costs (fixed opening costs + variable transportation costs). This is a classic uncapacitated or capacitated facility location problem, which is typically formulated as a Mixed-Integer Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E048",
+    "description": "Consider a scenario where a delivery driver has a list of five different locations: Shop1, Shop2, Shop3, Shop4, and Shop5. The driver's task is to deliver packages to each shop and then return to the starting point. The catch is, the driver can visit each shop only once. The cost associated with traveling from one location to another varies, and might include factors such as fuel costs, traffic considerations, and road tolls. The driver's goal is to minimize the total travel cost. \n\nHere's a quick summary of the travel costs between the shops:\n\nThe cost to travel from Shop1 to Shop2 is 13 units, to Shop3 is 87 units, to Shop4 is 76 units, and to Shop5 is 50 units.\nFrom Shop2, it costs 13 units to reach Shop1, 15 units to get to Shop3, 65 units to Shop4, and 85 units to Shop5.\nTraveling from Shop3, the costs are 87 units to Shop1, 15 units to Shop2, 45 units to Shop4, and 81 units to Shop5.\nFrom Shop4, it costs 76 units to go to Shop1, 65 units to Shop2, 45 units to Shop3, and 80 units to Shop5.\nLastly, from Shop5, it takes 50 units to reach Shop1, 85 units to Shop2, 81 units to Shop3, and 80 units to Shop4.\n\nWhat is the optimal travel cost for the driver to deliver packages to each shop exactly once and return to the starting point, while minimizing the total travel cost?",
+    "ground_truth": 203.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Routing",
+        "modeling_type": "IP",
+        "industry_sector": "Transportation",
+        "reason": "The problem describes a delivery driver visiting multiple locations exactly once and returning to the start, minimizing total travel cost, which is a classic Traveling Salesperson Problem (TSP) falling under Routing. Given the discrete nature of decisions (visit or not visit a path) and the objective to minimize cost, an Integer Program (IP) is the appropriate modeling type. The application directly relates to package delivery, placing it in the Transportation sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E000",
+    "description": "Imagine you are a dietitian and you have been tasked with creating a meal plan for a bodybuilder. You have six food items to choose from: Steak, Tofu, Chicken, Broccoli, Rice, and Spinach. Each food provides certain amounts of protein, carbohydrates, and calories, and each has its own cost.\n\nHere's the nutritional value and cost of each food:\n\n- Steak: It gives you 14 grams of protein, 23 grams of carbohydrates, and 63 calories for $4.\n- Tofu: It offers 2 grams of protein, 13 grams of carbohydrates, and 162 calories for $6.\n- Chicken: It packs a punch with 17 grams of protein, 13 grams of carbohydrates, and gives you 260 calories for $6.\n- Broccoli: It provides 3 grams of protein, a mere 1 gram of carbohydrates, and 55 calories for $8.\n- Rice: It gives a hearty 15 grams of protein, 23 grams of carbohydrates, and 231 calories for $8.\n- Spinach: It provides 2 grams of protein, 8 grams of carbohydrates, and a huge 297 calories for just $5.\n\nYour goal is to ensure that the bodybuilder gets at least 83 grams of protein, 192 grams of carbohydrates, and 2089 calories from whatever combination of these foods you choose. The challenge is to keep the cost as low as possible while meeting these nutritional targets. \n\nWhat is the minimum cost to meet these nutritional requirements with the available food options?",
+    "ground_truth": 57.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Diet Problem",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The task involves selecting food items to meet minimum nutritional requirements at the lowest cost, which is a classic diet problem. Since fractional amounts of food items are implicitly allowed and all relationships are linear, it can be formulated as a Linear Program. The application is directly related to health and nutrition planning."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E039",
+    "description": "Imagine you're responsible for managing the distribution of medical supplies across five different regions during a critical healthcare crisis. Each region starts with a certain amount of supplies but has different requirements based on the healthcare demands.\n\nHere is the current stock and the needed amounts in each region:\n\n- Region 1 has 410 units of supplies but needs 274 units.\n- Region 2 has 266 units but needs 331 units.\n- Region 3 has 132 units but needs 232 units.\n- Region 4 has only 6 units but urgently needs 359 units.\n- Region 5 has 485 units but needs just 74 units.\n\nTo ensure each region has the medical supplies it needs, you can transfer supplies between regions. However, transferring supplies incurs costs which vary between regions. Below is the cost matrix that shows the cost of transferring supplies from one region to another:\n\n- From/to Region 1: To Region 2 costs 24, to Region 3 costs 3, to Region 4 costs 27, to Region 5 costs 31.\n- From/to Region 2: To Region 1 costs 24, to Region 3 costs 11, to Region 4 costs 7, to Region 5 costs 37.\n- From/to Region 3: To Region 1 costs 30, to Region 2 costs 1, to Region 4 costs 38, to Region 5 costs 22.\n- From/to Region 4: To Region 1 costs 36, to Region 2 costs 18, to Region 3 costs 17, to Region 5 costs 35.\n- From/to Region 5: To Region 1 costs 41, to Region 2 costs 35, to Region 3 costs 33, to Region 4 costs 33.\n\nYour objective is to ensure every region has the medical supplies it requires at the lowest possible transportation cost. What would be the minimum cost to ensure all regions have the necessary medical supplies?",
+    "ground_truth": 13079.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Network Flow",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves distributing medical supplies between regions to meet demands while minimizing transportation costs, which is a classic minimum cost network flow problem. Since the quantities can be fractional and the objective is linear, it can be modeled as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E060",
+    "description": "Imagine a complex transportation network across 9 key hub cities that are tasked with delivering critical supplies from a central distribution center to a remote area in need. Each city (or hub) in this network can send and receive supplies through established routes, each with a specific maximum capacity. The goal is to maximize the flow of supplies from the source hub to the destination hub, ensuring that the delivery system operates at its peak efficiency without overloading any route.\n\nHere's a detailed look at the capacities, in tons of supplies, that each route can handle between the cities:\n\n- From City 0 (Source): Can send supplies to City 2 (20 tons), City 3 (10 tons), City 5 (2 tons), City 6 (11 tons), City 7 (5 tons), and City 8 (12 tons).\n- City 1: Can receive and then send supplies to City 0 (7 tons), City 2 (5 tons), City 3 (9 tons), City 4 (9 tons), City 5 (16 tons), City 6 (1 ton), City 7 (17 tons), and City 8 (7 tons).\n- City 2: Can manage supplies from City 0 (3 tons), and then distribute to City 1 (17 tons), City 3 (1 ton), City 4 (5 tons), City 5 (18 tons), City 6 (13 tons), City 7 (12 tons), and City 8 (14 tons).\n- City 3: Starts with supplies from City 0 (9 tons), forwarding to City 1 (10 tons), City 2 (2 tons), City 4 (10 tons), City 5 (11 tons), City 6 (11 tons), City 7 (5 tons), and City 8 (10 tons).\n- City 4: Receives from City 0 (7 tons) and redistributes to City 1 (5 tons), City 2 (1 ton), City 3 (19 tons), City 5 (19 tons), City 6 (12 tons), City 7 (14 tons), and City 8 (15 tons).\n- City 5: Gathers supplies from City 0 (16 tons) and can send out to City 1 (4 tons), City 2 (6 tons), City 3 (15 tons), City 4 (19 tons), City 6 (0 tons), and City 8 (20 tons).\n- City 6: Channels supplies from City 0 (3 tons) towards City 1 (0 tons), City 2 (17 tons), City 3 (16 tons), City 4 (19 tons), City 5 (8 tons), City 7 (8 tons), and City 8 (9 tons).\n- City 7: Starts with resources from City 0 (14 tons), sending to City 1 (11 tons), City 2 (13 tons), City 3 (17 tons), City 4 (10 tons), City 5 (13 tons), City 6 (20 tons), and City 8 (16 tons).\n- City 8 (Destination): Can receive from City 0 (20 tons), City 1 (5 tons), City 2 (20 tons), City 3 (16 tons), City 4 (0 tons), City 5 (15 tons), City 6 (1 ton), and City 7 (12 tons).\n\nIn this scenario, a \"0\" indicates that there is no established route for supplies to move directly between those two cities.\n\nThe challenge lies in determining the maximum tonnage of supplies that can be transported from City 0 (the source) to City 8 (the destination) without exceeding the capacity of any individual route in the network. What is the optimal value of supplies, in tons, that can be moved through this network?",
+    "ground_truth": 60.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Network Flow",
+        "modeling_type": "LP",
+        "industry_sector": "Transportation",
+        "reason": "The problem explicitly asks to maximize the flow of supplies from a source to a destination through a network with capacity constraints on each route, which is the definition of a maximum flow problem. This can be formulated as a Linear Program (LP) where decision variables represent flow on each arc, and the objective is to maximize total flow out of the source (or into the sink), subject to capacity and flow conservation constraints. The application is clearly about moving goods between cities, fitting the transportation sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E031",
+    "description": "You're on a mission to carefully plan your weekly meal prep, aiming to meet your specific dietary needs while keeping your budget in check. After doing some research, you've found seven different food items that you're considering incorporating into your meals. Each food item has its own nutritional content and cost, which you need to factor into your planning.\n\nHere are the details of each food option:\n\n- Food_1: For $6, it offers 6 grams of protein, 3 grams of carbohydrates, and 73 calories.\n- Food_2: Costs $2 and provides 16 grams of protein, 3 grams of carbs, and 181 calories.\n- Food_3: Priced at $10, this item brings 12 grams of protein, 17 grams of carbs, and 231 calories to the table.\n- Food_4: Another $6 option, giving you 9 grams of protein, 28 grams of carbs, and 160 calories.\n- Food_5: This one costs $4 and offers 12 grams of protein, 17 grams of carbohydrates, and 209 calories.\n- Food_6: The cheapest at $1, with 12 grams of protein, 14 grams of carbs, and 184 calories.\n- Food_7: Costs $9, providing 13 grams of protein, 20 grams of carbs, and 118 calories.\n\nYour nutritional goals for the week are quite specific: you aim to consume at least 59 grams of protein, 179 grams of carbohydrates, and 2,414 calories. Your challenge is to select from these seven food options in such a way that you meet your dietary requirements at the lowest possible cost.\n\nWhat is the cheapest cost to meet your nutritional needs?",
+    "ground_truth": 14.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Blending",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves selecting quantities of different food items to meet minimum nutritional requirements at the lowest cost, which is a classic blending problem. Since the decision variables (quantities of food items) can be continuous and the objective and constraints are linear, it can be formulated as a Linear Program. The application is directly related to personal dietary planning and nutrition, falling under the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E026",
+    "description": "Imagine you're on a mission to revamp your diet and want to ensure you're meeting your nutritional needs without putting a hole in your wallet. You've narrowed down your food options to four items: Chicken, Tofu, Rice, and Avocado. Each of these foods contributes different amounts of protein, carbs, and calories, and they each come at a different cost.\n\nHere's a detailed breakdown of what each food offers and the cost involved:\n\n- Chicken: Provides you 2 grams of protein, 4 grams of carbohydrates, and 218 calories at the price of $3.\n- Tofu: Offers a generous 18 grams of protein, 17 grams of carbohydrates, and 290 calories for $6.\n- Rice: Supplies you with 2 grams of protein, a hefty 28 grams of carbohydrates, and 298 calories for just $1.\n- Avocado: Packs in 18 grams of protein, 27 grams of carbohydrates, and 158 calories for $10.\n\nYour dietary goal is to consume at least 86 grams of protein, 120 grams of carbohydrates, and 2435 calories from your meals. Your challenge is to figure out the least expensive method to meet these nutritional targets using only these four food choices. What is the lowest cost to meet your nutritional requirements?",
+    "ground_truth": 31.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating resources (food items) to meet minimum nutritional requirements at the lowest cost, which is a classic resource allocation problem. Since the decision variables (quantities of food) can be continuous and the objective and constraints are linear, it can be formulated as a Linear Program. The application directly relates to dietary planning and nutritional intake, placing it in the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E099",
+    "description": "In the bustling world of retail, SupplyChain Innovations is at a crucial crossroads. With a diverse network of five retail stores, each with its own unique demand, the company is exploring options to establish a network of distribution centers that can efficiently fulfill these demands at the lowest possible cost. The challenge lies in selecting from seven potential distribution centers, each with its own set of opening costs and capacities, alongside varying transportation costs to the stores. The ultimate goal is to devise a solution that minimizes the total expense involved, which includes the opening costs of the distribution centers and the transportation costs of delivering goods to the retail outlets.\n\nGiven Data:\n- Number of Potential Distribution Centers: 7\n- Number of Retail Stores Needing Supply: 5\n\nOpening Costs for Each Distribution Center (in dollars):\n- Center 1: $151,000\n- Center 2: $192,000\n- Center 3: $114,000\n- Center 4: $171,000\n- Center 5: $160,000\n- Center 6: $120,000\n- Center 7: $182,000\n\nTransportation Cost Per Unit from Each Distribution Center to Retail Stores (in dollars):\n- From Center 1: $3 to Store 1, $3 to Store 2, $5 to Store 3, $4 to Store 4, $3 to Store 5\n- From Center 2: $5 to Store 1, $2 to Store 2, $4 to Store 3, $2 to Store 4, $4 to Store 5\n- From Center 3: $5 to Store 1, $1 to Store 2, $4 to Store 3, $2 to Store 4, $5 to Store 5\n- From Center 4: $4 to Store 1, $1 to Store 2, $1 to Store 3, $3 to Store 4, $3 to Store 5\n- From Center 5: $2 to Store 1, $4 to Store 2, $4 to Store 3, $3 to Store 4, $4 to Store 5\n- From Center 6: $4 to Store 1, $1 to Store 2, $3 to Store 3, $5 to Store 4, $3 to Store 5\n- From Center 7: $5 to Store 1, $1 to Store 2, $2 to Store 3, $4 to Store 4, $1 to Store 5\n\nDemand of Each Retail Store (in units):\n- Store 1: 715\n- Store 2: 413\n- Store 3: 641\n- Store 4: 745\n- Store 5: 964\n\nSupply Capacity of Each Distribution Center (in units):\n- Center 1: 1697\n- Center 2: 891\n- Center 3: 1755\n- Center 4: 1308\n- Center 5: 1575\n- Center 6: 834\n- Center 7: 1005\n\nSupplyChain Innovations seeks to establish a distribution framework that ensures each retail store's demand is met without exceeding the capacities of the chosen distribution centers. The varying transportation costs from each center present a complex puzzle that requires an optimal combination of distribution centers to be activated and the best logistical paths to be chosen to fulfill the store demands efficiently.\n\nQuestion:\nWhat is the optimal total cost for SupplyChain Innovations to open the necessary distribution centers and transport goods to meet all the retail stores' demands, considering both the opening costs of the centers and the transportation costs of supplying the stores?",
+    "ground_truth": 393863.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Facility Location",
+        "modeling_type": "MILP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves selecting which distribution centers to open from a set of potential locations to serve retail stores, minimizing total costs (fixed opening costs and variable transportation costs), which is a classic facility location problem. The decision variables for opening centers are binary, and transportation quantities are continuous, leading to a Mixed-Integer Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E100",
+    "description": "One unit of fruit salad A requires 1/4 of a mango, 1/8 of a pineapple, and 3 strawberries, with a net profit of 10 RMB. Making one unit of fruit salad B requires 1/2 a mango, 1/4 of a pineapple, and 1 strawberry, with a net profit of 20 RMB. The stock/resources row shows that there are 25 mangos, 10 pineapples, and 120 strawberries available for making these fruit salads. Suppose all fruits need to be processed and completely used to make the fruit salads A and B. All fruits must satisfy the constraint of having at most 5 units left or 5 additional units used. Find the maximal total profits of the fruit store. Note: Since we want to produce “complete fruit salads”, the variables x1 and x2 should actually be modeled as integer variables: x1, x2 ∈ Z.",
+    "ground_truth": 1200.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "MILP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves allocating limited fruit resources (mangoes, pineapples, strawberries) to produce two types of fruit salads (A and B) to maximize profit, which is a classic resource allocation problem. The decision variables (number of fruit salads) are integers, and the objective function and constraints are linear, making it a Mixed-Integer Linear Programming (MILP) problem. The context of making and selling fruit salads in a store clearly falls under the retail sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E108",
+    "description": "International Wool Company operates a large farm on which sheep are raised. The farm manager determined that for the sheep to grow in the desired fashion, they need at least minimum amounts of four nutrients (the nutrients are nontoxic so the sheep can consume more than the minimum without harm). The manager is considering three different grains to feed the sheep. The nutrients listed are A, B, C, and D. For Grain 1: Nutrient A is present in the amount of 20 units per pound. Nutrient B is present in the amount of 10 units per pound. Nutrient C is present in the amount of 50 units per pound. Nutrient D is present in the amount of 6 units per pound. The cost of Grain 1 is 41 cents per pound. For Grain 2: Nutrient A is present in the amount of 30 units per pound. Nutrient B is present in the amount of 10 units per pound. Nutrient C is present in the amount of 30 units per pound. Nutrient D is present in the amount of 2.5 units per pound. The cost of Grain 2 is 36 cents per pound. For Grain 3: Nutrient A is present in the amount of 70 units per pound. Nutrient B is present in the amount of 0 units per pound. Nutrient C is present in the amount of 0 units per pound. Nutrient D is present in the amount of 10 units per pound. The cost of Grain 3 is 96 cents per pound. The minimum daily requirement for each nutrient is also listed: Nutrient A requires 110 units daily. Nutrient B requires 18 units daily. Nutrient C requires 90 units daily. Nutrient D requires 14 units daily. The manager believes that as long as a sheep receives the minimum daily amount of each nutrient, it will be healthy and produce a standard amount of wool. The manager wants to raise the sheep at minimum cost. Find the minimum cost in cents.",
+    "ground_truth": 148.6,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Blending",
+        "modeling_type": "LP",
+        "industry_sector": "Agriculture",
+        "reason": "The problem involves determining the optimal mix of different grains to meet minimum nutrient requirements at the lowest cost, which is a classic blending problem. Since all relationships (costs, nutrient contributions, and requirements) are linear, it can be formulated as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E092",
+    "description": "GlobalSupply Inc. is embarking on a strategic overhaul of its distribution network to efficiently serve six retail stores scattered across different regions. The company has pinpointed nine potential locations for establishing distribution centers, each with its unique operational costs and capacities. The challenge lies in selecting the right combination of distribution centers to open and determining the best way to distribute goods to the retail stores in order to fulfill their demands. The overarching goal is to minimize the total cost involved, which includes the initial opening costs of the distribution centers and the ongoing transportation costs of delivering goods to the retail stores.\n\nGiven Data:\n- Number of Prospective Distribution Centers: 9\n- Number of Retail Stores to be Supplied: 6\n\nOpening Costs for Each Distribution Center (in dollars):\n- Center 1: 151,000\n- Center 2: 192,000\n- Center 3: 114,000\n- Center 4: 171,000\n- Center 5: 160,000\n- Center 6: 120,000\n- Center 7: 182,000\n- Center 8: 186,000\n- Center 9: 174,000\n\nTransportation Cost Per Unit from Each Distribution Center to Retail Stores (in dollars):\n- From Center 1 to Stores: $3 to Store 1, $5 to Store 2, $4 to Store 3, $3 to Store 4, $5 to Store 5, $2 to Store 6\n- From Center 2 to Stores: $4 to Store 1, $2 to Store 2, $4 to Store 3, $5 to Store 4, $1 to Store 5, $4 to Store 6\n- From Center 3 to Stores: $2 to Store 1, $5 to Store 2, $4 to Store 3, $1 to Store 4, $1 to Store 5, $3 to Store 6\n- From Center 4 to Stores: $3 to Store 1, $2 to Store 2, $4 to Store 3, $4 to Store 4, $3 to Store 5, $4 to Store 6\n- From Center 5 to Stores: $4 to Store 1, $1 to Store 2, $3 to Store 3, $5 to Store 4, $3 to Store 5, $5 to Store 6\n- From Center 6 to Stores: $1 to Store 1, $2 to Store 2, $4 to Store 3, $1 to Store 4, $4 to Store 5, $2 to Store 6\n- From Center 7 to Stores: $2 to Store 1, $1 to Store 2, $2 to Store 3, $5 to Store 4, $2 to Store 5, $4 to Store 6\n- From Center 8 to Stores: $4 to Store 1, $4 to Store 2, $4 to Store 3, $5 to Store 4, $3 to Store 5, $1 to Store 6\n- From Center 9 to Stores: $4 to Store 1, $2 to Store 2, $4 to Store 3, $2 to Store 4, $2 to Store 5, $4 to Store 6\n\nDemand of Each Retail Store (in units):\n- Store 1: 876 units\n- Store 2: 801 units\n- Store 3: 955 units\n- Store 4: 561 units\n- Store 5: 601 units\n- Store 6: 669 units\n\nSupply Capacity of Each Distribution Center (in units):\n- Center 1: 1615 units\n- Center 2: 1255 units\n- Center 3: 1816 units\n- Center 4: 1095 units\n- Center 5: 1519 units\n- Center 6: 1137 units\n- Center 7: 1678 units\n- Center 8: 1876 units\n- Center 9: 1591 units\n\nQuestion:\nGiven the challenge of selecting the optimal number and combination of distribution centers to open, along with configuring the most cost-effective way to supply the six retail stores to meet their demands, what is the minimal possible total cost for GlobalSupply Inc.? This total cost should include both the opening costs of the distribution centers and the transportation costs for delivering goods to the stores.",
+    "ground_truth": 394338.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Facility Location",
+        "modeling_type": "MILP",
+        "industry_sector": "Logistics",
+        "reason": "The problem involves selecting which distribution centers to open (a location decision) and then determining the optimal flow of goods to meet demand, which is characteristic of a facility location problem. The decision variables for opening centers are binary, and the transportation quantities are continuous, leading to a Mixed-Integer Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E062",
+    "description": "Imagine we're planning the logistics for a new high-speed data network connecting 8 major data centers across the country. This network is designed to optimize the flow of information, functioning much like a water distribution system, but for data. Each data center is connected to others through high-capacity data transmission lines, each with a specific capacity for data flow measured in terabits per second (Tbps).\n\nHere's the setup of this futuristic data network, detailing the maximum data flow capacity from one center to another:\n\n- From Data Center 0 (Source): Can send data to Data Center 1 (5 Tbps), Data Center 2 (16 Tbps), Data Center 3 (11 Tbps), Data Center 4 (2 Tbps), Data Center 5 (10 Tbps), Data Center 6 (17 Tbps), and Data Center 7 (2 Tbps).\n- From Data Center 1: Can send data to Data Center 0 (8 Tbps), Data Center 2 (14 Tbps), Data Center 3 (14 Tbps), Data Center 4 (2 Tbps), Data Center 5 (7 Tbps), Data Center 6 (11 Tbps), and Data Center 7 (1 Tbps).\n- From Data Center 2: Can send data to Data Center 0 (17 Tbps), Data Center 1 (20 Tbps), Data Center 3 (16 Tbps), Data Center 4 (13 Tbps), Data Center 6 (6 Tbps), and Data Center 7 (1 Tbps).\n- From Data Center 3: Can send data to Data Center 0 (3 Tbps), Data Center 1 (16 Tbps), Data Center 2 (10 Tbps), Data Center 4 (19 Tbps), Data Center 5 (12 Tbps), Data Center 6 (3 Tbps), and Data Center 7 (15 Tbps).\n- From Data Center 4: Can send data to Data Center 0 (15 Tbps), Data Center 1 (12 Tbps), Data Center 2 (19 Tbps), Data Center 3 (18 Tbps), Data Center 5 (14 Tbps), Data Center 6 (12 Tbps), and Data Center 7 (15 Tbps).\n- From Data Center 5: Can send data to Data Center 0 (2 Tbps), Data Center 1 (20 Tbps), Data Center 2 (20 Tbps), Data Center 3 (17 Tbps), Data Center 4 (4 Tbps), Data Center 6 (10 Tbps), and Data Center 7 (17 Tbps).\n- From Data Center 6: Can send data to Data Center 0 (15 Tbps), Data Center 1 (13 Tbps), Data Center 2 (13 Tbps), Data Center 3 (5 Tbps), Data Center 4 (10 Tbps), Data Center 5 (15 Tbps), and Data Center 7 (19 Tbps).\n- From Data Center 7 (Destination): Can send data back to Data Center 0 (10 Tbps), Data Center 1 (3 Tbps), Data Center 2 (14 Tbps), Data Center 3 (11 Tbps), Data Center 4 (5 Tbps), Data Center 5 (20 Tbps), and Data Center 6 (4 Tbps).\n\nIn this network, a capacity of \"0\" indicates that there is no direct data line connecting those two centers.\n\nThe objective is to determine the maximum amount of data (in Tbps) that can be transmitted from Data Center 0 (the source) to Data Center 7 (the destination), ensuring that the flow through each data line does not exceed its specified capacity. What is the maximum amount of data that can be sent from the source to the destination in terabits per second?",
+    "ground_truth": 63.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Network Flow",
+        "modeling_type": "LP",
+        "industry_sector": "Telecommunications",
+        "reason": "The problem asks to find the maximum data flow from a source to a destination through a network with capacity constraints on each link, which is a classic maximum flow problem. This can be formulated as a Linear Program (LP) where the objective is to maximize flow and constraints ensure flow conservation and capacity limits. The application is clearly within the telecommunications sector, dealing with data centers and data transmission."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E106",
+    "description": "The China Railroad Ministry is in the process of planning relocations of freight cars among 5 regions of the country to get ready for the fall harvest. The following presents the costs of moving a car between each pair of regions. The costs are as follows: moving a car from region 1 to region 2 costs 10 units, to region 3 costs 12 units, to region 4 costs 17 units, and to region 5 costs 34 units. From region 2 to region 1 costs 10 units, to region 3 costs 18 units, to region 4 costs 8 units, and to region 5 costs 46 units. From region 3, moving a car to region 1 costs 12 units, to region 2 costs 18 units, to region 4 costs 9 units, and to region 5 costs 27 units. From region 4, the cost to move a car to region 1 is 17 units, to region 2 is 8 units, to region 3 is 9 units, and to region 5 is 20 units. Lastly, from region 5 to region 1 the cost is 34 units, to region 2 is 46 units, to region 3 is 27 units, and to region 4 is 20 units. The following displays the current number of cars and the number needed for harvest shipping in each region. Region 1 currently has 115 cars but needs 200. Region 2 has 385 cars available but requires 500. Region 3 has 410 cars against a need of 800. Region 4 is currently equipped with 480 cars, yet the need is only for 200. Finally, region 5 has 610 cars available, with a need for 300 cars. Minimize the cost to move the cars such as the need is met. Provide your answer rounded to the nearest dollar.",
+    "ground_truth": 11370.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Network Flow",
+        "modeling_type": "LP",
+        "industry_sector": "Transportation",
+        "reason": "The problem involves minimizing the cost of moving freight cars between regions to satisfy demands, which is a classic minimum cost network flow problem. Since the decision variables (number of cars moved) can be continuous and the objective and constraints are linear, it can be modeled as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E022",
+    "description": "Imagine you're responsible for preparing the meals for a professional athlete who has specific dietary needs. You have six different food items available to purchase and cook: Chicken, Rice, Tuna, Beef, Corn, and Whey Protein. Each food provides various quantities of protein, carbohydrates, and calories, and they each have their own cost.\n\nHere's a quick rundown of what each food item provides and its cost:\n\n- Chicken: Offers 13 grams of protein, 27 grams of carbohydrates, and 81 calories for $1.\n- Rice: Provides 1 gram of protein, 1 gram of carbohydrate, and a whopping 137 calories for $9.\n- Tuna: Delivers 17 grams of protein, 2 grams of carbohydrates, and 53 calories for $2.\n- Beef: Contains 15 grams of protein, 18 grams of carbohydrates, and 126 calories for $9.\n- Corn: Comes with 2 grams of protein, 19 grams of carbohydrates, and 117 calories for $4.\n- Whey Protein: Provides a hefty 15 grams of protein, 11 grams of carbohydrates, and 277 calories for $6.\n\nThe athlete's daily dietary targets are at least 58 grams of protein, 148 grams of carbohydrates, and 2454 calories. Your mission is to determine the lowest-cost way to satisfy all these nutritional targets utilizing these six food options. So, what is the least amount of money you'll have to spend to meet the athlete's dietary requirements?",
+    "ground_truth": 31.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Blending",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves mixing different food items to meet specific nutritional targets at the minimum cost, which is a classic blending problem. Since the decision variables (quantities of each food) can be continuous and all relationships are linear, it can be formulated as a Linear Program. The application is directly related to an athlete's dietary needs, placing it in the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E058",
+    "description": "Imagine an intricate and bustling transportation network connecting six major cities in a region. Goods are transported from City 0 (the source) to City 5 (the destination) through numerous highways, each with varying capacities to handle the flow of goods. \n\nHere is a rundown of the maximum amount of goods (in thousands of tons) that can be transferred between cities per day:\n\n- From City 0 (Source): Can send goods to City 1 (6 tons), City 2 (8 tons), City 3 (1 ton), City 4 (9 tons), and City 5 (8 tons).\n- From City 1: Can send goods to City 0 (16 tons), City 2 (6 tons), City 4 (12 tons), and City 5 (16 tons). It has no connection to City 3.\n- From City 2: Can send goods to City 0 (7 tons), City 1 (16 tons), City 3 (20 tons), City 4 (17 tons), and City 5 (9 tons).\n- From City 3: Can send goods to City 0 (3 tons), City 1 (11 tons), City 2 (14 tons), and City 4 (7 tons). It has no connection to City 5.\n- From City 4: Can send goods to City 0 (6 tons), City 1 (19 tons), City 2 (19 tons), City 3 (3 tons), and City 5 (20 tons).\n- From City 5 (Destination): Can send goods back to City 0 (20 tons), City 1 (5 tons), City 2 (16 tons), City 3 (12 tons), and City 4 (2 tons).\n\nIn this scenario, a capacity of \"0\" means there is no direct highway connection between those two cities.\n\nThe question at hand is to calculate the maximum amount of goods that can be transported from City 0 (the source) to City 5 (the destination) per day while ensuring that the flow of goods on each highway doesn't exceed its capacity. \n\nSo what's the maximum amount of goods that can be transported from the source to the destination per day in thousands of tons?",
+    "ground_truth": 32.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Network Flow",
+        "modeling_type": "LP",
+        "industry_sector": "Transportation",
+        "reason": "The problem describes a transportation network with capacities on arcs (highways) and asks for the maximum flow from a source (City 0) to a sink (City 5), which is a classic maximum flow problem. This can be formulated as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E010",
+    "description": "Imagine you're planning your meals for the day and you want to ensure you're meeting all your nutritional needs without overspending. You have five food options: Chicken, Pasta, Rice, Beans, and Cheese. Each of these foods provides different amounts of protein, carbohydrates, and calories, along with their respective costs.\n\nHere's a breakdown of what each food offers and how much it costs:\n\n- Chicken: Provides 5 grams of protein, 13 grams of carbohydrates, and 121 calories for $7.\n- Pasta: Offers 3 grams of protein, 23 grams of carbohydrates, and 274 calories for $10.\n- Rice: Contains 11 grams of protein, 27 grams of carbohydrates, and 251 calories for $7.\n- Beans: Supplies 10 grams of protein, 27 grams of carbohydrates, and 259 calories for $9.\n- Cheese: Gives you 4 grams of protein, 18 grams of carbohydrates, and 199 calories for $7.\n\nYour goal is to get at least 60 grams of protein, 146 grams of carbohydrates, and 1727 calories from any combination of these foods. What is the cheapest cost to meet your nutritional needs?",
+    "ground_truth": 49.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Blending",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves combining different food items (ingredients) to meet specific nutritional requirements (blending constraints) at the minimum cost. Since the quantities of food items can be fractional and the relationships are linear, it's an LP. The application is clearly related to dietary planning and nutrition, falling under the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E109",
+    "description": "Solar Oil Company is a gasoline refiner and wholesaler. It sells two products to gas stations: regular and premium gasoline. It makes these two final products by blending together four raw gasolines and some chemical additives (the amount and cost of the additives per barrel are assumed to be independent of the mixture). Each gasoline has an octane rating that reflects its energy content. The four types of raw gasoline have octane ratings and daily availability as follows: raw gasoline 1 with 86 octane is available up to 20,000 barrels per day at a cost of $17.00 per barrel, raw gasoline 2 with 88 octane can be purchased up to 15,000 barrels per day at $18.00 per barrel, raw gasoline 3 with 92 octane is available up to 15,000 barrels daily at $20.50 per barrel, and raw gasoline 4 with 96 octane has a daily availability of 10,000 barrels at $23.00 per barrel. The required minimum octane for each final gasoline product is 89 for regular, which sells at $19.50 per barrel with a maximum daily demand of 35,000 barrels, and 93 for premium gasoline, priced at $22.00 per barrel with a demand of up to 23,000 barrels per day. Solar Oil can sell all the gas it produces up to that amount. The blending of gasoline is approximately a linear operation in terms of volume and octane. If x barrels of 80 octane gasoline are blended with y barrels of 90 octane gasoline, this produces x + y barrels of gasoline with an octane of (80x + 90y)/(x+y). There is no significant volume gain or loss, and octane of the mixture is a weighted average of the octanes of the inputs. Find the maximal profit of the company.",
+    "ground_truth": 42142.86,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Blending",
+        "modeling_type": "LP",
+        "industry_sector": "Oil & Gas",
+        "reason": "The problem involves mixing different raw gasolines to produce final products (regular and premium gasoline) while meeting quality specifications (octane ratings) and maximizing profit, which is a classic blending problem. The relationships between volumes, octanes, costs, and revenues are linear, making it suitable for a Linear Programming (LP) formulation."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E008",
+    "description": "Imagine you are a fitness enthusiast who takes your daily nutritional needs very seriously. Your dietitian has provided you with specific benchmarks to achieve every day: 91 grams of protein, 136 grams of carbohydrates, and 1563 calories. \n\nYou have a variety of food items available to you, each with its own cost and nutritional content. Let's take a look at what each of these food items offers:\n\n- Chicken breast: For $7, it provides 12g of protein, 5g of carbs, and 231 calories.\n- Tofu: Also $7, it delivers 10g of protein, 1g of carbs, and 210 calories.\n- Spinach: This cost-effective option at just $1 provides 11g of protein, 30g of carbs, and 295 calories.\n- Beef steak: Available at $9, it contributes 8g of protein, 26g of carbs, and 211 calories.\n- Eggs: For $6, eggs add 16g of protein, 9g of carbs, and 232 calories to your daily intake.\n- Brown rice: This $7 meal component provides 4g of protein, 25g of carbs, and 146 calories.\n- Bananas: At just $2, they contribute 4g of protein, 16g of carbs, and 255 calories.\n- Quinoa: For $6, quinoa provides 4g of protein, 20g of carbs, and 205 calories.\n\nNow here is your challenge: Using these food options, how can you meet your daily dietary requirements while keeping the cost as low as possible? What is the minimum cost you need to spend to meet your daily nutritional needs? Keep in mind that your response should be a single answer question, asking for only the optimal value, under the scenario of food selection.",
+    "ground_truth": 9.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Blending",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves selecting quantities of different food items to meet specific nutritional targets (protein, carbs, calories) at minimum cost, which is a classic blending problem. Since fractional quantities of food items are implicitly allowed (e.g., you can eat half a banana), it can be formulated as a Linear Program. The application is directly related to personal dietary planning and nutritional intake, fitting into the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E085",
+    "description": "SupplyChain Solutions Inc. is facing a complex logistical challenge in optimizing its distribution network. With five retail stores requiring steady supplies and six possible distribution centers to choose from, the task at hand is to find the most cost-effective way to keep the stores well-stocked. Each distribution center has its own fixed opening cost and a maximum supply capacity, while the cost to transport goods from these centers to the stores varies. The goal is straightforward yet daunting: to fulfill the demand of each retail store while minimizing the total operational cost, which includes both the opening of distribution centers and the transportation of goods.\n\nGiven Data:\n- Number of Potential Distribution Centers: 6\n- Number of Retail Stores Needing Supply: 5\n\nOpening Costs for Each Distribution Center (in dollars):\n- Center 1: $151,000\n- Center 2: $192,000\n- Center 3: $114,000\n- Center 4: $171,000\n- Center 5: $160,000\n- Center 6: $120,000\n\nTransportation Cost Per Unit from Each Distribution Center to Retail Stores (in dollars):\n- From Center 1: $2 to Store 1, $3 to Store 2, $3 to Store 3, $3 to Store 4, $5 to Store 5\n- From Center 2: $4 to Store 1, $3 to Store 2, $5 to Store 3, $2 to Store 4, $4 to Store 5\n- From Center 3: $2 to Store 1, $4 to Store 2, $5 to Store 3, $1 to Store 4, $4 to Store 5\n- From Center 4: $2 to Store 1, $5 to Store 2, $4 to Store 3, $1 to Store 4, $1 to Store 5\n- From Center 5: $3 to Store 1, $3 to Store 2, $2 to Store 3, $4 to Store 4, $4 to Store 5\n- From Center 6: $3 to Store 1, $4 to Store 2, $4 to Store 3, $1 to Store 4, $3 to Store 5\n\nDemand of Each Retail Store (in units):\n- Store 1: 884\n- Store 2: 420\n- Store 3: 566\n- Store 4: 673\n- Store 5: 787\n\nSupply Capacity of Each Distribution Center (in units):\n- Center 1: 1400\n- Center 2: 1115\n- Center 3: 813\n- Center 4: 1041\n- Center 5: 1576\n- Center 6: 1364\n\nQuestion:\nWhat is the optimal total cost for SupplyChain Solutions Inc. to open distribution centers and transport goods to meet all retail stores' demands, including both the opening costs of the centers and the transportation costs of supplying the stores?",
+    "ground_truth": 392760.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Facility Location",
+        "modeling_type": "MILP",
+        "industry_sector": "Logistics",
+        "reason": "The problem involves deciding which distribution centers to open (a binary decision) and then allocating supply from open centers to meet store demands, minimizing total fixed opening and variable transportation costs. This is a classic uncapacitated or capacitated facility location problem, formulated as a Mixed-Integer Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E036",
+    "description": "Imagine you're coordinating the distribution of medical supplies to four different clinics to prepare for an upcoming health drive. Each clinic starts with a certain stock of supplies, but each has a specific requirement to ensure they are adequately prepared.\n\nHere’s the initial stock and the required quantities for each clinic:\n- Clinic 1 has 330 units but needs 476 units.\n- Clinic 2 has 294 units but needs 92 units.\n- Clinic 3 has 474 units but needs 385 units.\n- Clinic 4 has 86 units but needs 203 units.\n\nTo transport medical supplies from one clinic to another, there are associated costs which vary depending on the route between clinics. Here are the costs for transferring supplies between clinics:\n- From Clinic 1: To Clinic 2 costs 2, to Clinic 3 costs 12, to Clinic 4 costs 19.\n- From Clinic 2: To Clinic 1 costs 28, to Clinic 3 costs 9, to Clinic 4 costs 10.\n- From Clinic 3: To Clinic 1 costs 23, to Clinic 2 costs 46, to Clinic 4 costs 7.\n- From Clinic 4: To Clinic 1 costs 19, to Clinic 2 costs 16, to Clinic 3 costs 23.\n\nThe challenge is to fulfill the needs of all clinics by redistributing the supplies among them at the lowest possible transportation cost. What is the minimum cost required to ensure all clinics have the necessary supplies?",
+    "ground_truth": 4813.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Transportation Problem",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves redistributing medical supplies between clinics to meet demands at minimum cost, which is a classic transportation problem. Since quantities can be continuous and costs are linear, it can be modeled as a Linear Program. The application is clearly in the health sector due to medical supplies and clinics."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E047",
+    "description": "Consider a scenario where a delivery company needs to deliver packages to four different cities: Alpha, Bravo, Charlie, and Delta. The company can start the delivery from any city, but they must ensure that each city is visited exactly once and then return to the city they started from. The objective is to minimize the total delivery cost, which could include gas expenses, labour hours, and vehicle maintenance costs.\nHere is an overview of the delivery costs between the cities:\nThe cost to deliver from Alpha to Bravo is 41 units, to Charlie is 55 units, and to Delta is 22 units.\nFrom Bravo, it costs 41 units to reach Alpha, 47 units to get to Charlie, and 47 units to Delta.\nIf the company starts from Charlie, the costs are 55 units to Alpha, 47 units to Bravo, and 35 units to Delta.\nAnd if they start at Delta, it costs 22 units to reach Alpha, 47 units to Bravo, and 35 units to Charlie.\nBased on these costs, what is the minimum total delivery cost for the company to deliver packages to each city exactly once and return to the starting point?",
+    "ground_truth": 138.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Routing",
+        "modeling_type": "IP",
+        "industry_sector": "Transportation",
+        "reason": "The problem describes finding the shortest path visiting all cities exactly once and returning to the start, which is a classic Traveling Salesperson Problem (TSP), a type of routing problem. Given the discrete nature of city visits and costs, an Integer Programming (IP) formulation is suitable. The application directly relates to package delivery, placing it in the transportation sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E083",
+    "description": "GlobalSupply Inc. is at a crossroads in revamping its logistics operations to efficiently cater to the needs of five retail stores spread across different locations. The company can choose from nine potential distribution centers, each with its unique setup cost and supply capacity. Moreover, the transportation costs per unit from these distribution centers to the retail stores vary, making the decision complex. The ultimate goal for GlobalSupply Inc. is to fulfill the demand at each retail store while minimizing the total cost, which includes the opening costs of the distribution centers and the transportation costs of the goods to the stores.\n\nGiven Data:\n\n- Number of Potential Distribution Centers: 9\n- Number of Retail Stores Needing Supply: 5\n\nOpening Costs for Each Distribution Center (in dollars):\n- Center 1: $151,000\n- Center 2: $192,000\n- Center 3: $114,000\n- Center 4: $171,000\n- Center 5: $160,000\n- Center 6: $120,000\n- Center 7: $182,000\n- Center 8: $186,000\n- Center 9: $174,000\n\nTransportation Cost Per Unit from Each Distribution Center to Retail Stores (in dollars):\n- From Center 1: $3 to Store 1, $5 to Store 2, $4 to Store 3, $3 to Store 4, $5 to Store 5\n- From Center 2: $2 to Store 1, $4 to Store 2, $2 to Store 3, $4 to Store 4, $5 to Store 5\n- From Center 3: $1 to Store 1, $4 to Store 2, $2 to Store 3, $5 to Store 4, $4 to Store 5\n- From Center 4: $1 to Store 1, $1 to Store 2, $3 to Store 3, $3 to Store 4, $2 to Store 5\n- From Center 5: $4 to Store 1, $4 to Store 2, $3 to Store 3, $4 to Store 4, $4 to Store 5\n- From Center 6: $1 to Store 1, $3 to Store 2, $5 to Store 3, $3 to Store 4, $5 to Store 5\n- From Center 7: $1 to Store 1, $2 to Store 2, $4 to Store 3, $1 to Store 4, $4 to Store 5\n- From Center 8: $2 to Store 1, $2 to Store 2, $1 to Store 3, $2 to Store 4, $5 to Store 5\n- From Center 9: $2 to Store 1, $4 to Store 2, $4 to Store 3, $4 to Store 4, $4 to Store 5\n\nDemand of Each Retail Store (in units):\n- Store 1: 908 units\n- Store 2: 434 units\n- Store 3: 605 units\n- Store 4: 480 units\n- Store 5: 961 units\n\nSupply Capacity of Each Distribution Center (in units):\n- Center 1: 1825 units\n- Center 2: 1821 units\n- Center 3: 1365 units\n- Center 4: 1929 units\n- Center 5: 1502 units\n- Center 6: 1201 units\n- Center 7: 1529 units\n- Center 8: 961 units\n- Center 9: 1001 units\n\nQuestion:\nWhat is the optimal total cost for GlobalSupply Inc. to open distribution centers and transport goods to meet all retail stores' demands, including both the opening costs of the centers and the transportation costs of supplying the stores?",
+    "ground_truth": 329872.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Facility Location",
+        "modeling_type": "MILP",
+        "industry_sector": "Logistics",
+        "reason": "The problem involves deciding which distribution centers to open (a binary decision) and how much to transport from opened centers to stores (continuous variables), minimizing total fixed opening costs and variable transportation costs, subject to supply and demand constraints. This is a classic fixed-charge facility location problem, which is formulated as a Mixed-Integer Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E065",
+    "description": "Imagine a futuristic transportation network that connects 9 major cities across a vast region, designed to maximize the efficiency of cargo transport from the central hub to a key distribution center. Each city in this network is connected by high-capacity routes, with the ability to transport a significant volume of goods measured in thousands of tons.\n\nHere's a detailed layout of the transportation capacities between each pair of cities:\n\n- From City 0 (Central Hub): Cargo can be sent to City 1 (1 ton), City 2 (16 tons), City 3 (8 tons), City 4 (18 tons), City 5 (4 tons), City 6 (0 tons, indicating no direct route), City 7 (8 tons), and City 8 (5 tons).\n- From City 1: Cargo can be dispatched to City 0 (15 tons), City 2 (11 tons), City 3 (8 tons), City 4 (13 tons), City 5 (2 tons), City 6 (1 ton), City 7 (7 tons), and City 8 (6 tons).\n- From City 2: Shipments can go to City 0 (15 tons), City 1 (4 tons), City 3 (3 tons), City 4 (1 ton), City 5 (13 tons), City 6 (13 tons), City 7 (11 tons), and City 8 (9 tons).\n- From City 3: Goods can be transported to City 0 (4 tons), City 1 (16 tons), City 2 (8 tons), City 4 (12 tons), City 5 (18 tons), City 6 (19 tons), City 7 (8 tons), and City 8 (11 tons).\n- From City 4: Cargo movement is possible to City 0 (4 tons), City 1 (19 tons), City 2 (3 tons), City 3 (2 tons), City 5 (6 tons), City 6 (1 ton), City 7 (13 tons), and City 8 (14 tons).\n- From City 5: Shipments can be directed to City 0 (6 tons), City 1 (19 tons), City 2 (15 tons), City 3 (10 tons), City 4 (16 tons), City 6 (17 tons), City 7 (15 tons), and City 8 (17 tons).\n- From City 6: Cargo can be routed to City 0 (13 tons), City 1 (7 tons), City 2 (13 tons), City 3 (4 tons), City 4 (14 tons), City 5 (3 tons), City 7 (8 tons), and City 8 (8 tons).\n- From City 7: Goods can be moved to City 0 (10 tons), City 1 (6 tons), City 2 (19 tons), City 3 (1 ton), City 4 (12 tons), City 5 (6 tons), City 6 (9 tons), and City 8 (14 tons).\n- From City 8 (Key Distribution Center): This city receives and dispatches goods but primarily serves as the endpoint for cargo coming from the Central Hub.\n\nA capacity of \"0\" in this context indicates that there is no established route for direct cargo transport between those two cities.\n\nThe challenge is to determine the maximum amount of cargo, in thousands of tons, that can be transported from the Central Hub (City 0) to the Key Distribution Center (City 8), ensuring that the flow of goods through each route does not surpass its highest capacity. What is the optimal value of cargo that can be moved from the Central Hub to the Key Distribution Center?",
+    "ground_truth": 60.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Network Flow",
+        "modeling_type": "LP",
+        "industry_sector": "Transportation",
+        "reason": "The problem asks to find the maximum amount of cargo that can be transported from a source (Central Hub) to a sink (Key Distribution Center) through a network of cities with given capacities on routes. This is a classic maximum flow problem, which can be formulated as a Linear Program (LP). The application is clearly within the transportation sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E015",
+    "description": "You're in charge of planning your meals for the week with the aim of balancing your nutritional needs while keeping your expenses within a budget. You have four main food items to choose from: Chicken, Broccoli, Beef, and Rice. Each food provides specific amounts of protein, carbohydrates, and calories, and they each have their own cost.\n\nHere's the nutritional value and cost of each food item:\n\n- Chicken: This food provides you with 10 grams of protein, 17 grams of carbohydrates, and 159 calories at a cost of $5.\n- Broccoli: You will receive 4 grams of protein, 3 grams of carbohydrates, and 126 calories for $5.\n- Beef: This high-protein food provides 13 grams of protein, 8 grams of carbohydrates, and 230 calories for $8.\n- Rice: This carb-rich food offers 15 grams of protein, a substantial 25 grams of carbohydrates, and 112 calories for just $3.\n\nYour nutritional target for the week is to consume at least 66 grams of protein, 101 grams of carbohydrates, and 1701 calories from your combination of these food items. The challenge is to figure out the most cost-effective way to meet these nutritional goals with these four food options. What is the minimal cost required to meet your nutritional requirements? Remember, the answer should be a single optimal value.",
+    "ground_truth": 47.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Diet Problem",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves selecting quantities of different food items to meet nutritional targets at minimum cost, which is a classic diet problem. Since fractional quantities of food items are implicitly allowed and all relationships are linear, it can be modeled as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E040",
+    "description": "Imagine a logistics manager tasked with planning a delivery route for a truck that needs to visit four different cities to distribute goods. The cities are identified numerically as 1, 2, 3, and 4. The truck can start its journey from any of these cities but must travel to each city exactly once and then return to the starting point. The objective is to arrange this route in such a way that the total travel cost is minimized. The costs associated with traveling between the cities are as follows:\n- The cost to travel from City 1 to City 2 is 52 units, to City 3 is 89 units, and to City 4 is 11 units.\n- From City 2, it costs 52 units to reach City 1, 14 units to get to City 3, and 13 units to City 4.\n- Traveling from City 3, the costs are 89 units to City 1, 14 units to City 2, and 87 units to City 4.\n- Lastly, from City 4, it costs 11 units to go to City 1, 13 units to City 2, and 87 units to City 3.\n\nWhat is the minimum total travel cost for the truck to visit each city exactly once and return to the starting city?",
+    "ground_truth": 50.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Routing",
+        "modeling_type": "IP",
+        "industry_sector": "Transportation",
+        "reason": "The problem describes finding the shortest route for a truck visiting multiple cities and returning to the start, which is a classic Traveling Salesperson Problem (TSP), a type of routing problem. Given the discrete nature of city visits and the objective to minimize cost, an Integer Program (IP) is the standard modeling approach. The application directly relates to logistics and delivery, placing it in the transportation sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E037",
+    "description": "Imagine you are coordinating a logistics effort to redistribute essential supplies among seven regional distribution centers. Each center starts with a specific quantity of supplies but has different needs to ensure smooth operations across the regions.\n\nHere's the initial setup:\n\n- Distribution Center 1 has 97 units but needs 119 units.\n- Distribution Center 2 has 458 units but needs 275 units.\n- Distribution Center 3 has 473 units but needs only 36 units.\n- Distribution Center 4 has 380 units but needs 459 units.\n- Distribution Center 5 has 34 units but needs 17 units.\n- Distribution Center 6 has 399 units but needs 128 units.\n- Distribution Center 7 has 163 units but needs 425 units.\n\nTo move supplies between these centers, there is a cost associated with each transfer, which varies depending on the route. Here's the cost matrix showing the cost to transfer supplies from one center to another:\n\n- From/To Center 1: To 2 costs 41, to 3 costs 42, to 4 costs 31, to 5 costs 39, to 6 costs 2, to 7 costs 18.\n- From/To Center 2: To 1 costs 48, to 3 costs 9, to 4 costs 22, to 5 costs 47, to 6 costs 29, to 7 costs 39.\n- From/To Center 3: To 1 costs 36, to 2 costs 22, to 4 costs 29, to 5 costs 45, to 6 costs 33, to 7 costs 45.\n- From/To Center 4: To 1 costs 19, to 2 costs 5, to 3 costs 10, to 5 costs 3, to 6 costs 42, to 7 costs 20.\n- From/To Center 5: To 1 costs 13, to 2 costs 10, to 3 costs 21, to 4 costs 7, to 6 costs 35, to 7 costs 11.\n- From/To Center 6: To 1 costs 5, to 2 costs 35, to 3 costs 29, to 4 costs 16, to 5 costs 40, to 7 costs 9.\n- From/To Center 7: To 1 costs 7, to 2 costs 24, to 3 costs 26, to 4 costs 38, to 5 costs 33, to 6 costs 13.\n\nYour task is to ensure each distribution center has the supplies it needs while minimizing the total cost of redistribution. What would be the minimum cost to achieve this?",
+    "ground_truth": 4172.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Network Flow",
+        "modeling_type": "LP",
+        "industry_sector": "Logistics",
+        "reason": "The problem involves moving supplies between distribution centers with varying supply and demand, minimizing transportation costs. This is a classic transportation problem, which is a specific type of minimum cost network flow problem. Since the quantities can be continuous and the objective and constraints are linear, it can be modeled as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E051",
+    "description": "Imagine we're managing a telecommunications network that spans 6 key points, from a primary data center (Point 0) to a major user hub (Point 5). These points are interconnected by data lines, each with a specific capacity for data transfer.\n\nHere are the capacities of each data line, indicating the maximum amount of data (in Gigabytes per second) that can flow from one point to another:\n\n- From Point 0 (Data Center): Can send data to Point 1 (14 GB/s), Point 2 (9 GB/s), Point 3 (8 GB/s), Point 4 (7 GB/s), and Point 5 (8 GB/s).\n- From Point 1: Can send data to Point 0 (4 GB/s), Point 2 (9 GB/s), Point 3 (10 GB/s), and Point 5 (12 GB/s).\n- From Point 2: Can send data to Point 0 (4 GB/s), Point 1 (12 GB/s), Point 3 (13 GB/s), Point 4 (20 GB/s), and Point 5 (16 GB/s).\n- From Point 3: Can send data to Point 0 (10 GB/s), Point 1 (8 GB/s), Point 2 (12 GB/s), and Point 5 (18 GB/s).\n- From Point 4: Can send data to Point 0 (3 GB/s), Point 1 (13 GB/s), Point 2 (11 GB/s), Point 3 (20 GB/s), and Point 5 (2 GB/s).\n- From Point 5 (User Hub): Can send data back to Point 0 (17 GB/s), Point 1 (4 GB/s), Point 2 (8 GB/s), Point 3 (2 GB/s), and Point 4 (12 GB/s).\n\nIn this network, a capacity of \"0\" means there is no direct data line between those two points.\n\nThe objective is to find out the maximum amount of data that can be transferred from Point 0 (Data Center) to Point 5 (User Hub) per second, while making sure that the data transfer through each line does not exceed its capacity. What is the maximum amount of data that can be sent from the data center to the user hub per second in Gigabytes?",
+    "ground_truth": 46.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Network Flow",
+        "modeling_type": "LP",
+        "industry_sector": "Telecommunications",
+        "reason": "The problem describes a network of data lines with capacities and asks for the maximum data transfer from a source (Point 0) to a sink (Point 5), which is a classic maximum flow problem. This can be formulated as a Linear Program (LP) where the objective is to maximize flow subject to capacity constraints and flow conservation at intermediate nodes. The application is clearly within telecommunications, managing data transfer in a network."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E087",
+    "description": "The nationwide retail chain, MarketHub, is in the process of restructuring its distribution network to efficiently cater to the demands of its five retail stores spread across different regions. The strategic decision involves selecting from eight potential distribution centers, each with its unique operational costs and capacities. The goal is to ensure that each retail store's demand is met with the lowest possible total cost, a comprehensive figure that includes the opening costs of the distribution centers and the transportation costs of the goods.\n\nGiven Data:\n- Number of Potential Distribution Centers: 8\n- Number of Retail Stores Needing Supply: 5\n\nOpening Costs for Each Distribution Center (in dollars):\n- Center 1: $151,000\n- Center 2: $192,000\n- Center 3: $114,000\n- Center 4: $171,000\n- Center 5: $160,000\n- Center 6: $120,000\n- Center 7: $182,000\n- Center 8: $186,000\n\nTransportation Cost Per Unit from Each Distribution Center to Retail Stores (in dollars):\n- From Center 1: $3 to Store 1, $3 to Store 2, $5 to Store 3, $4 to Store 4, $3 to Store 5\n- From Center 2: $5 to Store 1, $2 to Store 2, $4 to Store 3, $2 to Store 4, $4 to Store 5\n- From Center 3: $5 to Store 1, $1 to Store 2, $4 to Store 3, $2 to Store 4, $5 to Store 5\n- From Center 4: $4 to Store 1, $1 to Store 2, $1 to Store 3, $3 to Store 4, $3 to Store 5\n- From Center 5: $2 to Store 1, $4 to Store 2, $4 to Store 3, $3 to Store 4, $4 to Store 5\n- From Center 6: $4 to Store 1, $1 to Store 2, $3 to Store 3, $5 to Store 4, $3 to Store 5\n- From Center 7: $5 to Store 1, $1 to Store 2, $2 to Store 3, $4 to Store 4, $1 to Store 5\n- From Center 8: $4 to Store 1, $2 to Store 2, $2 to Store 3, $1 to Store 4, $2 to Store 5\n\nDemand of Each Retail Store (in units):\n- Store 1: 964 units\n- Store 2: 739 units\n- Store 3: 491 units\n- Store 4: 766 units\n- Store 5: 854 units\n\nSupply Capacity of Each Distribution Center (in units):\n- Center 1: 1308 units\n- Center 2: 1575 units\n- Center 3: 834 units\n- Center 4: 1005 units\n- Center 5: 1904 units\n- Center 6: 1825 units\n- Center 7: 1821 units\n- Center 8: 1365 units\n\nMarketHub aims to optimize the balance between maintaining an efficient supply chain and minimizing costs. The challenge is to select the right combination of distribution centers to open and manage the flow of goods to the stores in a way that meets all the demand while keeping both opening and transportation costs as low as possible.\n\nQuestion:\nWhat is the optimal total cost for MarketHub to open distribution centers and transport goods to fully satisfy the demands of all five retail stores, including both the opening costs of the centers and the transportation costs of supplying the stores?",
+    "ground_truth": 394198.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Facility Location",
+        "modeling_type": "MILP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves selecting which distribution centers to open (a binary decision) and then determining the flow of goods to satisfy retail store demands, minimizing total costs. This is a classic uncapacitated or capacitated facility location problem, which is typically formulated as a Mixed-Integer Linear Program (MILP) due to the binary decision variables for opening facilities and continuous variables for transportation, all within a linear objective and constraints. The application is clearly within the retail sector, dealing with a distribution network for a retail chain."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "E054",
+    "description": "In a vast network of canals interconnecting 9 strategic reservoirs, engineers have meticulously mapped out the maximum capacities for water transfer (in millions of gallons per day) between each reservoir to facilitate efficient water distribution across a sprawling agricultural region. These reservoirs, from the source (Reservoir 0) to the final distribution point (Reservoir 8), are crucial in ensuring that water reaches the farthest corners of the region, especially during peak farming season.\n\nHere's a detailed breakdown of the water transfer capacities between reservoirs:\n\n- From Reservoir 0: Water can be directed to Reservoir 1 (6 million gallons), Reservoir 2 (1 million gallons), Reservoir 3 (14 million gallons), Reservoir 4 (20 million gallons), Reservoir 5 (6 million gallons), Reservoir 6 (13 million gallons), Reservoir 7 (13 million gallons), and Reservoir 8 (15 million gallons).\n- From Reservoir 1: Water can flow to Reservoir 0 (2 million gallons), Reservoir 2 (5 million gallons), Reservoir 3 (5 million gallons), Reservoir 4 (13 million gallons), Reservoir 5 (5 million gallons), Reservoir 6 (12 million gallons), Reservoir 7 (9 million gallons), and Reservoir 8 (15 million gallons).\n- From Reservoir 2: Capacities are to Reservoir 0 (15 million gallons), Reservoir 3 (8 million gallons), Reservoir 4 (16 million gallons), Reservoir 5 (9 million gallons), Reservoir 6 (19 million gallons), Reservoir 7 (15 million gallons), and Reservoir 8 (6 million gallons).\n- From Reservoir 3: Water can be transferred to Reservoir 0 (13 million gallons), Reservoir 1 (8 million gallons), Reservoir 4 (14 million gallons), Reservoir 5 (12 million gallons), Reservoir 6 (9 million gallons), Reservoir 7 (1 million gallons), and Reservoir 8 (2 million gallons).\n- From Reservoir 4: Channels lead to Reservoir 0 (4 million gallons), Reservoir 1 (14 million gallons), Reservoir 2 (19 million gallons), Reservoir 3 (16 million gallons), Reservoir 5 (14 million gallons), Reservoir 6 (11 million gallons), Reservoir 7 (11 million gallons), and Reservoir 8 (2 million gallons).\n- From Reservoir 5: Water is distributed to Reservoir 0 (19 million gallons), Reservoir 1 (18 million gallons), Reservoir 2 (5 million gallons), Reservoir 3 (20 million gallons), Reservoir 4 (9 million gallons), Reservoir 6 (11 million gallons), Reservoir 7 (5 million gallons), and Reservoir 8 (7 million gallons).\n- From Reservoir 6: The flow is to Reservoir 0 (11 million gallons), Reservoir 1 (14 million gallons), Reservoir 2 (20 million gallons), Reservoir 3 (17 million gallons), Reservoir 4 (11 million gallons), Reservoir 5 (13 million gallons), Reservoir 7 (11 million gallons), and Reservoir 8 (16 million gallons).\n- From Reservoir 7: It can send to Reservoir 0 (6 million gallons), Reservoir 1 (2 million gallons), Reservoir 2 (17 million gallons), Reservoir 4 (10 million gallons), Reservoir 5 (13 million gallons), Reservoir 6 (17 million gallons), and Reservoir 8 (9 million gallons).\n- From Reservoir 8: Water can flow back to Reservoir 0 (8 million gallons), Reservoir 1 (9 million gallons), Reservoir 2 (7 million gallons), Reservoir 3 (18 million gallons), Reservoir 4 (12 million gallons), Reservoir 5 (13 million gallons), Reservoir 6 (5 million gallons), and Reservoir 7 (9 million gallons).\n\nA \"0\" indicates that there is no direct water transfer capability between those two reservoirs.\n\nThe challenge is to optimize this water distribution system to ascertain the maximum possible water transfer from Reservoir 0 (the source) to Reservoir 8 (the final distribution point) per day. What is the optimal value of water (in millions of gallons) that can be transferred from the source to the final distribution point per day?",
+    "ground_truth": 72.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Network Flow",
+        "modeling_type": "LP",
+        "industry_sector": "Environment",
+        "reason": "The task describes maximizing water transfer through a network of reservoirs with defined capacities, which is a classic maximum flow problem. This problem can be formulated as a Linear Program (LP). The application is clearly related to water management and distribution, fitting the 'Environment' sector."
+      }
+    ],
+    "cluster": null
+  }
+]

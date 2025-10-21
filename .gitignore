@@ -1,0 +1,14 @@
+# local output folders
+/logs/
+/scripts/
+/case_studies/
+/testing/
+/learning/
+/materials/
+/data/experience_library/iterations/
+/data/experience_library/snapshots/
+
+# cache
+/__pycache__/
+
+

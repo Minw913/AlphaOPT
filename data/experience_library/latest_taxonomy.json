@@ -1,0 +1,211 @@
+{
+  "Domain Modeling": {
+    "Resource Allocation": {
+      "Multi-Commodity Flow": {
+        "definition": "Model each resource type as a separate flow on the same network; balances multiple commodities simultaneously.",
+        "condition": "Applies when the problem description involves multiple resource types that share a common network topology or capacities and interact through shared arcs or nodes."
+      },
+      "Capacity/Resource Balance Equations": {
+        "definition": "Conserve each resource at every node: inflow - outflow = demand or supply.",
+        "condition": "Applies when the problem domain requires resources to move or transform through nodes and local conservation must hold."
+      },
+      "Set-Partitioning/Assignment": {
+        "definition": "Assign each task to exactly one resource or agent using ∑_j x_ij = 1 constraints.",
+        "condition": "Applies when the problem description requires each item or task to be exclusively assigned to exactly one choice among many."
+      },
+      "Resource Pooling": {
+        "definition": "Aggregate interchangeable resources into a single pool before allocation.",
+        "condition": "Applies when the problem domain contains multiple identical resources that are substitutable and individual identities do not matter."
+      }
+    },
+    "Production Planning": {
+      "Inventory Balance Equations": {
+        "definition": "Track stock level over time: I_t = I_{t-1} + production - demand.",
+        "condition": "Applies when the problem description involves materials or products that carry over between periods and must satisfy stock-flow balance."
+      },
+      "Time-Indexed Variables": {
+        "definition": "Define decision variables for every period (e.g., x_t) to capture dynamics.",
+        "condition": "Applies when the problem domain requires discrete time modeling to capture capacities, setups, or carryover decisions."
+      }
+    },
+    "Network Flow": {
+      "Flow Conservation": {
+        "definition": "For each node: inflow - outflow = net demand (could be negative for supply).",
+        "condition": "Applies when the problem description involves quantities traversing a directed network and nodal balance must be maintained."
+      },
+      "Arc-Capacity Constraints": {
+        "definition": "Limit flow on each arc: 0 ≤ f_ij ≤ cap_ij.",
+        "condition": "Applies when the problem domain contains edges with maximum throughput or capacity limits."
+      },
+      "Max-Flow Objective": {
+        "definition": "Maximize total flow sent from source to sink.",
+        "condition": "Applies when the problem description requires maximizing throughput between designated source and sink nodes."
+      },
+      "Multi-Commodity Flow": {
+        "definition": "Handle several flow types on shared arcs with coupling capacity.",
+        "condition": "Applies when the problem domain contains distinct commodities that share arcs and compete for common capacities."
+      }
+    },
+    "Facility Location": {
+      "Fixed Charge (Big-M Linking)": {
+        "definition": "Open-close binary y_j with customer flow constrained by M·y_j.",
+        "condition": "Applies when the problem description specifies that service or flow is allowed only if a facility is opened."
+      },
+      "Customer Assignment Constraints": {
+        "definition": "Each customer assigned to exactly one open facility.",
+        "condition": "Applies when the problem domain requires every demand point to be uniquely served by a single facility."
+      }
+    },
+    "Routing": {
+      "Flow Conservation": {
+        "definition": "Vehicle enters and leaves each visited node once (or with load balance).",
+        "condition": "Applies when the problem description requires feasible vehicle tours with balanced entry and exit at each visited node."
+      },
+      "Set Partitioning/Assignment": {
+        "definition": "Each customer appears in exactly one route.",
+        "condition": "Applies when the problem domain requires every customer to be served exactly once across all vehicles."
+      },
+      "Subtour Elimination Constraints": {
+        "definition": "Prevent cycles not containing the depot (e.g., MTZ, SEC).",
+        "condition": "Applies when the problem description allows decision variables to form disconnected cycles that must be eliminated."
+      },
+      "Time-Windows Formulation": {
+        "definition": "Respect earliest/latest service times via arrival variables.",
+        "condition": "Applies when the problem domain specifies customer time windows or penalizes early/late service."
+      }
+    },
+    "Scheduling": {
+      "Time-Indexed Variables": {
+        "definition": "Binary x_{j,t} = 1 if job j starts or runs at time t.",
+        "condition": "Applies when the problem description requires modeling job starts or executions period by period."
+      },
+      "Precedence Constraints": {
+        "definition": "Job A must finish before job B starts: start_B ≥ finish_A + lag.",
+        "condition": "Applies when the problem domain contains tasks with technological or logical order requirements."
+      },
+      "Resource-Leveling Constraints": {
+        "definition": "Smooth resource usage across periods using capacity limits.",
+        "condition": "Applies when the problem description requires balancing workload across periods to reduce peaks while meeting deadlines."
+      }
+    },
+    "Inventory Management": {
+      "Inventory Balance Equations": {
+        "definition": "Same as production but may include safety stock or backlog.",
+        "condition": "Applies when the problem domain involves inventory evolving over time with safety stock or backlog policies."
+      },
+      "Multi Period Resource Balance": {
+        "definition": "Ensure cumulative inflow ≥ cumulative demand across horizon.",
+        "condition": "Applies when the problem description requires cumulative feasibility across multiple periods instead of per-period checks."
+      }
+    },
+    "Selection": {
+      "Binary Selection Constraints": {
+        "definition": "Pick subset of items with 0-1 variables and cardinality limit.",
+        "condition": "Applies when the problem domain requires choosing a subset under count, budget, or compatibility limits."
+      }
+    },
+    "Balancing": {
+      "Load Balancing Constraints": {
+        "definition": "Keep workload across agents within a tolerance band.",
+        "condition": "Applies when the problem description requires fairness or controls maximum imbalance across parallel resources."
+      }
+    },
+    "Packaging": {
+      "Knapsack Constraints": {
+        "definition": "Capacity ∑ w_i x_i ≤ C with binary x_i selecting items.",
+        "condition": "Applies when the problem domain requires selecting items that consume a single scalar capacity such as weight, volume, or budget."
+      }
+    }
+  },
+  "General Formulation": {
+    "Variable Definition": {
+      "Continuous vs. Discrete Confusion": {
+        "definition": "Choose integer/binary for indivisible items; continuous for divisible flows.",
+        "condition": "Applies when decision quantities in the problem represent indivisible counts or choices versus divisible amounts such as flows."
+      },
+      "Explicit Bounds": {
+        "definition": "Set realistic lb/ub to speed presolve and prevent negative or excessive values.",
+        "condition": "Applies when the problem description provides natural physical, economic, or logical limits that can tightly bound decision variables."
+      },
+      "Indexing & Data Structure Alignment": {
+        "definition": "Ensure variable indices match parameter keys to avoid KeyError.",
+        "condition": "Applies when variables are indexed over sets or dictionaries that must align with the keys of the provided data."
+      }
+    },
+    "Constraint Formulation": {
+      "Incorrect Relational Operators": {
+        "definition": "Use ≥, ≤ not strict <,>; match 'at most'/'at least' intent.",
+        "condition": "Applies when natural-language statements such as 'at most' or 'at least' must be translated into algebraic inequalities."
+      },
+      "Linearization of Non-linear Forms": {
+        "definition": "Transform nonlinear expressions into linear (e.g., product, ratio).",
+        "condition": "Applies when nonlinear relations among variables reduce tractability or solver performance."
+      },
+      "Symmetry Breaking Constraints": {
+        "definition": "Constraints added to eliminate solutions that differ only by permuting identical components to shrink search tree.",
+        "condition": "Applies when indistinguishable assignments, routes, or entities create symmetric optima in the problem domain."
+      },
+      "Unit Inconsistency": {
+        "definition": "Keep all terms in compatible units to avoid 1000x errors.",
+        "condition": "Applies when input data come from different unit systems or incompatible measurement scales."
+      },
+      "Big-M & Indicator Variables": {
+        "definition": "Using binary variables with large-M constants to activate or deactivate constraints.",
+        "condition": "Applies when constraints depend on logical on/off conditions controlled by binary variables."
+      }
+    },
+    "Objective Specification": {
+      "Sum vs. Makespan Confusion": {
+        "definition": "Distinguish minimizing total completion time vs. maximum finish time.",
+        "condition": "Applies when multiple resources or activities can run in parallel and the objective is ambiguous between total completion time and makespan."
+      },
+      "Redundant Auxiliary Variables": {
+        "definition": "Avoid dummy vars when expression can be placed directly in objective.",
+        "condition": "Applies when auxiliary variables merely re-express existing linear combinations without adding modeling value."
+      }
+    },
+    "Units Scaling": {
+      "Unit Conversion & Consistency": {
+        "definition": "Convert all flows/capacities to same basis (e.g., m³/h).",
+        "condition": "Applies when inputs are expressed in heterogeneous units or incompatible measurement systems."
+      },
+      "Big-M Magnitude & Numerical Stability": {
+        "definition": "Pick tight M based on real upper bound to avoid loose LP.",
+        "condition": "Applies when Big-M formulations are used and natural safe upper bounds exist to tighten the model."
+      },
+      "Floating-Point Stability": {
+        "definition": "Scale coefficients to similar magnitudes to prevent numeric issues.",
+        "condition": "Applies when coefficients span several orders of magnitude and risk destabilizing numerical optimization."
+      }
+    },
+    "Explicit Bounds": {},
+    "Big-M & Indicator Variables": {}
+  },
+  "Code Implementation": {
+    "Solver & API Syntax": {
+      "Library Import/Reference Errors": {
+        "definition": "Import solver correctly, e.g., `import gurobipy as gp`.",
+        "condition": "Applies when the mathematical model contains solver calls that fail due to missing or incorrectly referenced libraries or aliases."
+      },
+      "Quicksum vs. sum Syntax": {
+        "definition": "`gp.quicksum()` builds expressions efficiently; Python `sum()` is slow.",
+        "condition": "Applies when the mathematical model contains linear expressions aggregated over large index sets that should be constructed using solver-native summation operators."
+      },
+      "Strict Inequalities": {
+        "definition": "Replace x < y with x ≤ y - 1 for integer vars, or add ε-buffer for continuous.",
+        "condition": "Applies when the mathematical model contains strict inequality relations between variables that cannot be directly handled by LP/MIP solvers."
+      }
+    },
+    "Data I/O & Validation": {
+      "KeyError & Index Mismatch": {
+        "definition": "Attempting to access non-existent dict entry; fix by `.get()` or validation.",
+        "condition": "Applies when the mathematical model contains indexed variables or parameters that are accessed with indices not present in the corresponding data structures."
+      },
+      "Missing Data Defaults": {
+        "definition": "Provide default 0 when optional parameter absent to avoid `None`.",
+        "condition": "Applies when the mathematical model contains optional parameters whose values may be absent in the dataset and require default assignments to preserve model validity."
+      }
+    },
+    "Model Constraints & Logic": {}
+  }
+}

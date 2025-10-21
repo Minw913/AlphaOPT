@@ -1,0 +1,1410 @@
+[
+  {
+    "task_id": "F190",
+    "description": "A bank can build small and large branches to serve their customers. A small branch can serve 50 customers per day and requires 10 bank tellers. A large branch can serve 100 customers per day and requires 15 bank tellers. The bank has available 200 bank tellers and needs to be able to serve at least 1200 customers per day. How many of each branch size should they build to minimize the total number of branches needed?",
+    "ground_truth": 0.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Finance",
+        "reason": "The problem involves allocating limited resources (bank tellers) to different types of branches (small and large) to meet a customer service demand, while minimizing the total number of branches. Since the number of branches must be integers, Integer Programming is the appropriate modeling type. The application is clearly within the banking sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F106",
+    "description": "A student takes calcium pills and vitamin D pills one after the other. Each calcium pill takes 5 minutes to be effective while each vitamin D pill takes 6 minutes to be effective. Over a month, the student must take at least 130 pills of medication and at least 40 should be vitamin D pills because they enhance the absorption of calcium in the body. Since vitamin D is complimentary to calcium, the student must take more calcium pills than vitamin D pills. How many pills of each should the student take to minimize the total time it takes for the medication to be effective?",
+    "ground_truth": 690.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating two types of pills (resources) to minimize total effectiveness time, subject to minimum quantity and ratio constraints. It can be formulated as a Linear Program because all objective and constraints are linear, and variables are continuous (though in reality, pills are discrete, the problem doesn't explicitly state integer requirements and often in initial modeling, continuous relaxation is considered)."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F137",
+    "description": "A woman on a diet needs to eat two types of meal preps, a smoothie and a protein bar. Each smoothie contains 2 units of protein and 300 calories. Each protein bar contains 7 units of protein and 250 calories. The woman must eat 2 times more protein bars than smoothies. If the woman can consume at most 2000 calories, how many of each should she eat or drink to maximize her protein intake?",
+    "ground_truth": 56.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating limited resources (calories) to maximize an objective (protein intake) by choosing quantities of discrete items (smoothies and protein bars). The decision variables must be integers, making it an Integer Programming problem. The application is directly related to dietary planning and health."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F119",
+    "description": "A lighting company has access to two types of lights to provide their customers, an LED fixture, and a fluorescence lamp. The LED light uses 5 units of electricity per hour and needs to be changed 3 times a decade. Conversely, the fluorescence lamp uses 8 units of electricity per hour and needs to be changed 4 times a decade. Due to previous installations, at least 30% implemented lights must be fluorescence lamps. If the customer requires at least 300 light fixtures and can use at most 2000 units of electricity, how many of each light should be installed to reduce the total number of light changes?",
+    "ground_truth": 990.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Manufacturing",
+        "reason": "The problem involves allocating two types of light fixtures (resources) to minimize light changes, subject to constraints on total fixtures, electricity usage, and a minimum percentage of one fixture type. Since the number of lights must be integers, Integer Programming is the appropriate modeling type. The context of providing lighting products to customers falls under manufacturing."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F023",
+    "description": "A zookeeper feeds a gorilla with bananas and mangoes. Each banana contains 80 calories, 20 grams of potassium, and 10 grams of sugar. Each mango contains 100 calories, 15 grams of potassium, and 8 grams of sugar.  The gorilla must consume at least 4000 calories and 150 grams of potassium. Since the gorilla prefers bananas, at most 33% of the fruits he eats can be mangoes. If excess sugar makes the gorilla aggressive, how many of each fruit should he consume to minimize his sugar intake?",
+    "ground_truth": 440.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Animal Care",
+        "reason": "The problem involves allocating two types of fruits (resources) to meet nutritional requirements while minimizing an objective (sugar intake). The relationships are linear, and variables can be continuous, making it a Linear Programming problem. The application is directly related to animal nutrition and care."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F187",
+    "description": "A bakery makes fiber supplemented brownies and lemon squares. Each brownie requires 5 units of chocolate mix and 4 units of fiber. Each lemon square requires 7 units of lemon mix and 6 units of fiber. Lemon squares sell much faster and thus the number of lemon squares made must be larger than the number of brownies made. However, to please all customers, at least 40% of the items made must be brownies. If the bakery has 2500 units of chocolate mix and 3300 units of lemon mix, how many of each should be made to minimize the total amount of fiber needed?",
+    "ground_truth": 0.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Production Planning",
+        "modeling_type": "LP",
+        "industry_sector": "Food & Beverage",
+        "reason": "The problem involves determining the optimal quantities of two products (brownies and lemon squares) to produce given limited resources (chocolate mix, lemon mix) and specific production constraints (ratio of items, minimum brownie production) to minimize a cost function (total fiber needed). This is a classic production planning scenario that can be formulated as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F173",
+    "description": "A gem factory has two drills, a high intensity one and a low intensity one. Each day, the high intensity drill can process 50 gems and requires 50 units of water to dissipate heat. Each day, the low intensity drill can process 30 gems and requires 20 units of water to dissipate heat. Each day the factory must process 800 gems and they have available 700 units of water. Since the high intensity drill produces a lot of noise pollution, at most 40% of the drills can be high intensity ones. Further, at least 10 should be low intensity drills. How many of each drill should be used to minimize the total number of drills needed?",
+    "ground_truth": 22.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Manufacturing",
+        "reason": "The problem involves allocating two types of drills (resources) to meet production targets and water constraints, while minimizing the total number of drills. The decision variables (number of each drill type) must be integers, making it an Integer Programming problem. The context of gem processing clearly places it within the manufacturing sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F049",
+    "description": "A meal service company delivers meals to customers either on electric bikes or scooters. A bike can hold 8 meals and requires 3 units of charge. A scooter can hold 5 meals and requires 2 units of charge. Since the city is more friendly towards scooters, at most 30% of the electric vehicles can be bikes and at least 20 scooters must be used. If the company only has 200 units of charge available, how many of each vehicle should be used to maximize the number of meals that can be delivered?",
+    "ground_truth": 513.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Logistics",
+        "reason": "The problem involves allocating limited resources (charge units, vehicle types) to maximize an objective (number of meals delivered), which is characteristic of resource allocation. The constraints and objective function are linear, making it a Linear Programming problem. The context of delivering meals to customers falls under logistics."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F053",
+    "description": "A company in the middle east delivers their packages to customers on camels and horses. A camel can carry 50 packages while a horse can carry 60 packages. A camel requires 20 units of food while a horse requires 30 units of food. The company needs to deliver at least 1000 packages and they have 450 units of food available. Since horses are not as suited for the hot climate, the number of horses cannot exceed the number of camels. How many of each animal should be used to minimize the total number of animals?",
+    "ground_truth": 19.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Logistics",
+        "reason": "The problem involves allocating two types of resources (camels and horses) to meet delivery requirements while minimizing the total number of animals, subject to capacity and food constraints. This is a classic resource allocation problem that can be formulated and solved using Linear Programming."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F035",
+    "description": "An international goods exporter uses ships and planes to transport goods. A ship can take 40 containers worth of goods and uses 500 liters of fuel per trip. A plane can take 20 containers worth of goods and uses 300 liters of fuel per trip. The company needs to transport at least 500 containers worth of goods. In addition, there can be at most 10 plane trips made and a minimum of 50% of the trips made must be by ship. How many of each trip should be made to minimize the total amount of fuel consumed?",
+    "ground_truth": 6300.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Transportation",
+        "reason": "The problem involves allocating trips between ships and planes to minimize fuel consumption while meeting container transport demands and trip constraints. This is a classic resource allocation problem that can be formulated as a Linear Program because all relationships are linear and variables can be continuous (though in reality, trips would be integers, the problem as stated doesn't strictly enforce integer trips, making LP a valid initial approach)."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F114",
+    "description": "A party organizer needs to transport party goers either by limousine or bus. Limousines can carry 12 people and buses can carry 18 people. They need to transport at least 400 people. Because limousines are more attractive, at least 70% of the vehicles must be limousines. How many of each type of vehicle should be used to minimize the total number of limousines and buses used?",
+    "ground_truth": 30.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Event Management",
+        "reason": "The problem involves allocating two types of vehicles (limousines and buses) to transport people, subject to capacity and proportion constraints, with the objective of minimizing the total number of vehicles. Since the number of vehicles must be integers, Integer Programming is the appropriate modeling type. The application is clearly within event management."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F054",
+    "description": "A chair produced by Elm Furniture yields a profit of $43, while every dresser yields a $52 profit. Each week, 17 gallons of stain and 11 lengths of oak wood are available. Each chair requires 1.4 gallons of stain and 2 lengths of oak wood, while each dresser requires 1.1 gallons of stain and 3 lengths of oak wood. Determine the maximum profit.",
+    "ground_truth": 224.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Manufacturing",
+        "reason": "The problem involves allocating limited resources (stain and oak wood) to produce chairs and dressers to maximize profit, which is a classic resource allocation problem. Since all relationships are linear (profit per unit, resource consumption per unit, and resource availability), it can be formulated as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F056",
+    "description": "A mail delivery service in an island village delivers mail by regular and speed boats. A regular boat can carry 20 pieces of mail per trip and uses 10 liters of gas. A speed boat can carry 30 pieces of mail per trip and uses 20 liters of gas. There can be at most 20 regular boat trips. Since customers want their mail as fast as possible, at least 50% of the trips must be made by speed boats. If the service needs to deliver 1000 pieces of mail, how many trips of each should be made to minimize the total amount of gas consumed?",
+    "ground_truth": 600.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Transportation",
+        "reason": "The problem involves allocating trips between two types of boats (resources) to deliver a certain amount of mail while minimizing gas consumption, subject to capacity and operational constraints. This is a classic resource allocation problem that can be formulated and solved using Linear Programming."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F075",
+    "description": "There has been a horrible accident and patients need to be taken to the hospital by either a helicopter or bus. A helicopter can transport 5 patients per trip and takes 1 hour. On the other hand, a bus can transport 8 patients per trip and takes 3 hours. At least 120 patients need to be transported and at least 30% of the trips should be by helicopter. In addition, there can be at most 10 bus trips. How should the patients be taken to minimize the total time to transport the patients?",
+    "ground_truth": 24.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating two types of transportation resources (helicopters and buses) to transport patients, which is a classic resource allocation problem. The objective is to minimize total time subject to linear constraints on patient count, trip percentages, and maximum bus trips, making it suitable for a Linear Programming (LP) formulation. The context of transporting patients to a hospital after an accident clearly places it within the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F052",
+    "description": "A theme park transports its visitors around the park either by scooter or rickshaw. A scooter can carry 2 people while a rickshaw can carry 3 people. To avoid excessive pollution, at most 40% of the vehicles used can be rickshaws. If the park needs to transport at least 300 visitors, minimize the total number of scooters used.",
+    "ground_truth": 75.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Leisure & Entertainment",
+        "reason": "The problem involves allocating two types of vehicles (scooters and rickshaws) to transport visitors, subject to capacity and pollution constraints, while minimizing the number of scooters. This is a classic resource allocation problem that can be formulated as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F006",
+    "description": "A drug company is making allergy pills and fever reducing pills in two factories, factory 1 and factory 2. Factory 1 produces 20 allergy pills and 15 fever reducing pills per hour. Factory 2 produces 10 allergy pills and 30 fever reducing pills per hour.  Factory 1 is much more efficient and only requires 20 units of a rare compound while factory 2 requires 30 units of a rare compound. The company only has available 1000 units of the rare compound. If the company must make at least 700 allergy pills and 600 fever reducing pills, how many hours should each factory be run to minimize the total time needed?",
+    "ground_truth": 36.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating limited resources (rare compound, factory hours) to produce different types of pills (allergy, fever reducing) to meet minimum production requirements while minimizing total operating time. This is a classic linear programming problem as all relationships are linear and the objective is to minimize a linear function subject to linear constraints."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F181",
+    "description": "A high rise building is buying two types of furnaces, a new model and an old model. A new model furnace can heat 10 apartments and consumes 200 kWh per day. An old model can heat 15 apartments and consumes 250 kWh per day. Since the old model is harder to find, at most 35% of the furnaces can be the old model and at least 5 new model furnaces should be used. If the high rise needs to heat at least 200 apartments and has 3500 kWh of electricity available, how many of each furnace should be purchase to minimize the total number of furnaces?",
+    "ground_truth": 17.0212768,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Real Estate",
+        "reason": "The problem involves allocating two types of furnaces (resources) to meet heating demands and electricity constraints while minimizing the total number of furnaces. The decision variables (number of each furnace type) must be integers, leading to an Integer Programming formulation."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F060",
+    "description": "A village hosts a banquet and provides bike and car transportation for everyone. A bike can take 3 people while a car can take 5 people. Since cars are more expensive, at most 40% of the vehicles can be cars. If the village needs to transport at least 500 people, how many of each vehicle should be used to minimize the total number of bikes needed?",
+    "ground_truth": 80.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Logistics",
+        "reason": "The problem involves allocating two types of resources (bikes and cars) to transport people, subject to capacity and proportion constraints, while minimizing the number of bikes. Since the number of vehicles must be integers, Integer Programming is the appropriate modeling type. The application is related to planning transportation, which falls under logistics."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F026",
+    "description": "A doctor suggests that his patient eat oranges and grapefruit to meet his vitamin C and vitamin A requirements. One orange contains 5 units of vitamin C, 3 units of vitamin A, and 5 grams of sugar. One grapefruit contains 7 units of vitamin C, 5 units of vitamin A, and 6 grams of sugar. The patient must get at least 80 units of vitamin C and 70 units of vitamin A. Since the patent prefers oranges, he must eat at least 2 times as many oranges as grapefruit. How many of each should he eat to minimize his sugar intake?",
+    "ground_truth": 105.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating two types of fruit (resources) to meet nutritional requirements while minimizing sugar intake, which is a classic resource allocation problem. The objective function and all constraints are linear, making it a Linear Programming problem. The context of a doctor, patient, and vitamin requirements clearly places it within the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F207",
+    "description": "A toy company can build two factory types, a medium sized factory and a small factory. A medium sized factory can make 50 toys per day and requires 3 operators. A small factory can make 35 toys per day and requires 2 operators. The company must make at least 250 toys per day but they only have available 16 operators. How many of each factory should the company build to minimize the total number of factories?",
+    "ground_truth": 5.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Manufacturing",
+        "reason": "The problem involves allocating limited resources (operators) to different factory types to meet production targets while minimizing the number of factories, which is a classic resource allocation problem. Since the number of factories must be integer, Integer Programming (IP) is the appropriate modeling type. The context of building factories and making toys clearly falls under the manufacturing sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F058",
+    "description": "A toy store hires seasonal and full-time volunteers to deliver gifts and gives them points for service. A seasonal volunteer can deliver 5 gifts and gets 2 points. A full-time volunteer can deliver 8 gifts and gets 5 points. The store can only give out 200 points. In addition, a maximum of 30% of the volunteers can be seasonal and at least 10 must be full-time. How many of each volunteer is needed to maximize the total number of gifts that can be delivered?",
+    "ground_truth": 342.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves allocating two types of volunteers (resources) to maximize gifts delivered, subject to constraints on points, volunteer mix, and minimum full-time volunteers. Since the number of volunteers must be integers, Integer Programming is the appropriate modeling type. The application is clearly within a toy store setting, which falls under retail."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F182",
+    "description": "A cell phone company is building rural and urban factories. A rural factory can make 100 phones per day and requires 8 managers. An urban factory can make 200 phones per day and requires 20 managers. The company has available 260 managers and must make at least 3000 phones per day. How many of each factory type should be built to minimize the total number of factories?",
+    "ground_truth": 0.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Manufacturing",
+        "reason": "The problem involves allocating limited resources (managers) to different factory types to achieve production targets while minimizing the number of factories. Since the number of factories must be integers, Integer Programming (IP) is the appropriate modeling type. The context of building factories and producing phones clearly falls under the manufacturing sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F161",
+    "description": "An ice cream store makes chocolate and vanilla ice cream by the gallon. In a week, they must make at least 5 gallons of each type but at most 10 gallons of chocolate ice cream and at most 8 gallons of vanilla ice cream. It takes 1 hour to produce a gallon of chocolate ice cream and 2 hours to produce a gallon of vanilla ice cream. In a week, 30 hours are available to make ice cream. In addition at least 6 workers are needed with 1 working on the chocolate ice cream and 2 on the vanilla ice cream at any time. If the profit per gallon of chocolate ice cream is $200 and the profit per gallon of vanilla ice cream is $300, how many gallons of each should be made to maximize profit?",
+    "ground_truth": 4400.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Food & Beverage",
+        "reason": "The problem involves allocating limited resources (production hours, workers) to maximize profit from producing two types of ice cream, which is a classic resource allocation problem. The objective function and all constraints are linear, making it a Linear Programming (LP) problem. The context of making and selling ice cream clearly falls under the Food & Beverage industry."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F180",
+    "description": "A farmer has 140 hectares available to grow tomatoes and potatoes. She prefers to plant more tomatoes than potatoes, but the soil and weather conditions allow her to grow at most twice the amount of tomatoes to that of potatoes. In addition, she must grow at least 20 hectares of tomatoes and at least 30 hectares of potatoes to meet community demands. If the profit per hectare of tomatoes is $350 and the profit per hectare of potatoes is $600, how many hectares of each crop should she plant to maximize profit? What is this profit?",
+    "ground_truth": 79000.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Agriculture",
+        "reason": "The problem involves allocating a limited resource (land) between two activities (growing tomatoes and potatoes) to maximize profit, which is a classic resource allocation problem. The relationships are linear (profit, land use, constraints), making it a Linear Programming problem. The context of growing crops on a farm clearly places it in the agriculture sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F045",
+    "description": "A florist transports his flowers to stores in small bouquets and large bouquets. A small bouquet has 5 flowers while a large bouquet has 10 flowers. The florist can transport at most 80 small bouquets and 50 large bouquets. In total, he can transport at most 70 bouquets and he must transport at least 20 large bouquets. Since small bouquets are more popular, he must transport at least twice as many small bouquets as large bouquets. How many of each bouquet should he transport to maximize the total number of flowers that reach the stores?",
+    "ground_truth": 465.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves allocating transportation capacity to different types of bouquets to maximize the total number of flowers, which is a classic resource allocation problem. The constraints and objective function are all linear, making it a Linear Programming problem. The context of a florist transporting flowers to stores clearly falls under the retail sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F043",
+    "description": "A meat shop ships their burger patties using refrigerated trucks and vans. Each truck can take 1000 patties at a cost of $300 per trip. Each van can take 500 patties at a cost of $100 per trip. Because the trucks have difficulty moving around in the city, the number of trucks must not exceed the number of vans. The meat shop has to ship at least 50000 patties and they have a budget of $12500. How should they plan their shipment to minimize the total number of trips?",
+    "ground_truth": 75.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Logistics",
+        "reason": "The problem involves allocating resources (trucks and vans) to meet demand (patties to be shipped) while minimizing an objective (total trips) under budget and capacity constraints. Since the number of trucks and vans must be integers, Integer Programming is the appropriate modeling type. The application sector is logistics due to the focus on shipping and transportation."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F093",
+    "description": "A man takes two supplements to get his daily iron and calcium requirements. A pill of supplement A has 5 units of iron and 10 units of calcium. A pill of supplement B contains 4 units of iron and 15 units of calcium.  The man needs a minimum of 40 units of iron and 50 units of calcium per day. If the cost per pill of supplement A is $2 and the cost per pill of supplement B is  $3, how many of each should he buy to minimize costs?",
+    "ground_truth": 16.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating two types of supplements (resources) to meet minimum daily nutritional requirements (constraints) while minimizing cost. This is a classic linear programming problem as all relationships are linear and variables are continuous (though in practice, pills are discrete, the problem statement doesn't enforce integer solutions, making LP the most direct fit for the given information)."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F022",
+    "description": "A patient in the hospital can take two different pain killers, pain killer 1 and pain killer 2. Per dose, pain killer 1 delivers 0.5 units of medicine to the legs and 0.8 units of medicine to the back. Per dose, pain killer 2 delivers 0.7 units of medicine to the legs and 0.4 units of medicine to the back. In, addition pain killer 1 deliver 0.3 units of sleeping medicine and pain killer 2 delivers 0.6 units of sleeping medicine. At most 8 units of sleep medicine should be delivered and at least 4 units of medicine should be delivered to the legs. How many doses of each should be taken to maximize the amount of medicine delivered to the back?",
+    "ground_truth": 20.8,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating doses of two pain killers (resources) to a patient to maximize medicine delivered to the back, subject to constraints on other medicine types. This is a classic resource allocation problem that can be formulated as a Linear Program (LP) due to linear objective and constraints, and its application is clearly within the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F011",
+    "description": "A clinic makes batches of vitamin shots and pills. Each batch of vitamin shots requires 30 units of vitamin C and 40 units of vitamin D. Each batch of vitamin pills requires 50 units of vitamin C and 30 units of vitamin D. Since pills are more popular, the number of batches of vitamin pills must be larger than the number of batches of vitamin shots. Further, the clinic can make at most 10 batches of vitamin shots. The clinic has available 1200 units of vitamin C and 1500 units of vitamin D. If each batch of vitamin shots can supply 10 people and each batch of vitamin pills can supply 7 people, how many batches of each should be made to maximize the number of people that can be supplied?",
+    "ground_truth": 226.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating limited resources (vitamin C and D) to produce different products (vitamin shots and pills) to maximize an objective (number of people supplied), which is characteristic of a resource allocation problem. The relationships are linear, and variables are continuous (batches can be fractional in a pure LP context, though integer solutions are often sought in practice), making it a Linear Programming problem. The context of a clinic making vitamin products clearly places it in the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F142",
+    "description": "Both chemical A and chemical B need to be added to a mixer for making bread. One unit of chemical A takes 30 seconds to be effective while one unit of chemical B takes 45 seconds to be effective. Because chemical A can be dangerous, there has to be at most a third as much chemical A as chemical B in the mixer. If there has to be at least 300 units of chemical A in the mixer and at least 1500 units of total chemicals in the mixer, how many units of each should be added to minimize the total time it takes for the mixed bread to be ready?",
+    "ground_truth": 61875.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Food & Beverage",
+        "reason": "The problem involves allocating two chemicals (resources) to minimize total time, subject to various constraints on their quantities. The objective and all constraints are linear, making it a Linear Programming problem. The application is in food production (making bread)."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F100",
+    "description": "Zeta Bakery sells two types of cookies. They sell a strawberry cookie and a sugar cookie. Let's say they make x1 strawberry cookies, at a profit of $5.5 each, and x2 sugar cookies, at a profit of $12 each (x1 and x2 are unknowns both greater than or equal to 0). The daily demand for these cookies is at most 100 strawberry cookies and at most 80 sugar cookies. The bakery is short staffed and can make a maximum of 100 cookies of either type per day. How much of each cookie should the bakery make in order to maximize profit?",
+    "ground_truth": 1070.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Production Planning",
+        "modeling_type": "LP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves determining the optimal quantities of two types of cookies to produce to maximize profit, subject to resource constraints (staffing, demand). This is a classic production planning scenario. The objective function and all constraints are linear, making it a Linear Programming (LP) problem. The context of selling cookies in a bakery clearly falls under the retail sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F141",
+    "description": "A biotechnology company has 35,000 units of antibiotics available which is important to the process of making a first-dose and second-dose of vaccines. The first-dose vaccine requires 30 units of antibiotics and 20 mg of gelatine whereas the second-dose vaccine requires 65 units of antibiotics and 60 mg of gelatine. Since the first-dose vaccine is required before the second-dose vaccine, there must be more first-dose than second-dose vaccines manufactured. However, at least 40 second-dose vaccines must be made. How many of each vaccine should be made to minimize the amount of gelatine used?",
+    "ground_truth": 3200.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating limited resources (antibiotics) to produce two types of vaccines (first-dose and second-dose) while satisfying production constraints and minimizing gelatine usage. This is a classic resource allocation problem that can be formulated as a Linear Program due to linear objective and constraints."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F010",
+    "description": "A doctor recommends that a man eat burgers and pizza in order to put on weight. Each burger contains 10 units of fat and 300 calories. Each slice of pizza contains 8 units of fat and 250 calories. The man must get at least 130 units of fat and 3000 calories. Further, each burger contains 12 units of cholesterol while each slice of pizza contains 10 units of cholesterol. Since burgers are slightly more expensive, the man decides to eat at least twice as many slices of pizza as burgers. How many of each should he eat to minimize his cholesterol intake?",
+    "ground_truth": 160.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating two food items (burgers and pizza) to meet nutritional requirements while minimizing cholesterol intake. This is a classic resource allocation problem that can be formulated as a Linear Program due to linear objective and constraints."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F066",
+    "description": "A tourist spot in the mountains allows visitors to travel to the top either by hot-air balloon or gondola lift. A hot air balloon can carry 4 visitors while a gondola lift can carry 6 visitors. Each hot air balloon produces 10 units of pollution while each gondola lift produces 15 units of pollution. There can be at most 10 hot-air balloon rides and at least 70 visitors need to be transported. How many of each type of transport method should be taken to minimize the total pollution produced?",
+    "ground_truth": 175.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Tourism",
+        "reason": "The problem involves allocating two types of transport methods (hot-air balloon and gondola lift) to minimize pollution while satisfying visitor capacity and operational constraints. This is a classic resource allocation problem. Since all relationships are linear and variables can be continuous (though practically they would be integers, the problem as stated doesn't strictly enforce it, making LP a valid initial modeling choice), it falls under Linear Programming. The context of transporting visitors to a tourist spot clearly places it in the Tourism sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F185",
+    "description": "An oil and gas company operates on 300 acres of land where they use oil wells of small and large size. Per acre of land, a small oil well can produce 2 barrels of oil. Per acre of land, a large oil well can produce 5 barrels of oil. However, a small oil well produces 10 units of pollution and requires 5 drill bits per acre and a large oil well produces 20 units of pollution and requires 10 drill bits per acre. The company has available 2500 drill bits and due to strict environmental laws can produce at most 4500 units of pollution. For how many acres should each oil well be used to maximize the total production of oil?",
+    "ground_truth": 1125.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Oil and Gas",
+        "reason": "The problem involves allocating a limited resource (land, drill bits, pollution capacity) to different activities (small and large oil wells) to maximize an objective (oil production). The relationships are linear, making it suitable for a Linear Programming (LP) formulation."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F170",
+    "description": "A teddy bear company produces three different colored bears: black, white, and brown. These bears are made in two different factories. Running factory 1 for 1 hour costs $300 and produces 5 black teddy bears, 6 white teddy bears, and 3 brown ones. Running factory 2 for 1 hour costs $600 and produces 10 black teddy bears and 10 white teddy bears. (but no brown ones). To meet children's demand, at least 20 black teddy bears, 5 white teddy bears, and 15 brown teddy bears must be made daily. Given this information, develop a linear programming problem assuming the teddy bear company wants to minimize the cost of production.",
+    "ground_truth": 1500.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Production Planning",
+        "modeling_type": "LP",
+        "industry_sector": "Manufacturing",
+        "reason": "The problem involves determining the optimal production levels (hours of operation for each factory) to meet demand while minimizing cost, which is a classic production planning scenario. The objective function and all constraints are linear, making it a Linear Programming problem. The context of producing teddy bears in factories clearly falls under the manufacturing sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F144",
+    "description": "A dessert shop is popular for their only two desserts - matcha ice cream and orange sorbet. Two units of flavouring and four units of ice cream is required to make one order of matcha ice cream. Four units of flavouring and three units of water is required to make an order of orange sorbet. The dessert shop has recently been getting more orders online for orange sorbet and therefore, there should be more orange sorbet made than matcha ice cream. However, at least fifteen percent of desserts made must be matcha ice cream. The dessert shop has available 600 units of ice cream and 550 units of water. How many of each dessert should the shop make to minimize the total amount of flavouring needed?",
+    "ground_truth": 0.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Production Planning",
+        "modeling_type": "LP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves deciding the quantity of two desserts to produce given limited resources and specific production constraints, which is a classic production planning scenario. The objective is to minimize a linear cost function (flavouring) subject to linear resource and production constraints, making it a Linear Programming problem. The context of a dessert shop selling products to customers falls under the retail sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F061",
+    "description": "An industrial tire company delivers large tires for equipment to remote engineering sites either by cargo planes or ultrawide trucks. Each cargo plane can transport 10 tires per trip and costs $1000. Each ultrawide truck can transport 6 tires per trip and costs $700. The company needs to transport at least 200 tires and has available $22000. Because most remote sites don't have proper airports, the number of plane trips cannot exceed the number of ultrawide truck trips. How many trips of each should be done to minimize the total number of trips?",
+    "ground_truth": 26.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Logistics",
+        "reason": "The problem involves allocating available resources (budget, vehicle capacity) to minimize total trips, which is a classic resource allocation problem. The objective and constraints are linear, making it a Linear Programming problem. The context of delivering tires to remote sites falls under logistics."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F087",
+    "description": "Forest Paper makes two types of products: graph paper and music paper. Each type of paper requires the use of two machines, a printing machine and a scanning machine. It takes 3 minutes on the printing machine and 5.5 minutes on the scanning machine to make a ream of graph paper. On the other hand, it takes 1.5 minutes on the printing machine and 3 minutes on the scanning machine to make a ream of music paper. Each machine is available for a maximum of 350 minutes per day. The company sells a package of graph paper at a profit of $4 and a package of music paper at a profit of $2.5. The company can sell all the paper it makes. How many reams of each type should the company produce in a day in order to maximize profit? What is that profit?",
+    "ground_truth": 290.5,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Manufacturing",
+        "reason": "The problem involves allocating limited machine time (resources) to produce two types of paper to maximize profit, which is a classic resource allocation problem. The relationships are linear (production times, profits, machine availability), making it suitable for a Linear Programming (LP) model."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F009",
+    "description": "A science show preforms two different demonstrations, demonstration 1 and demonstration 2. In demonstration 1, 10 units of mint and 20 units of the active ingredient is used to make 25 units of minty foam. In demonstration 2, 12 units of mint and 15 units of the active ingredient is used to make 18 units of minty foam. In addition, demonstration 1 creates 5 units of black tar while demonstration 2 creates 3 units of black tar. The show has available 120 units of mint and 100 units of active ingredients. If at most 50 units of black tar can be produced, how many of each demonstration should be done to maximize the amount of minty foam produced?",
+    "ground_truth": 125.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Entertainment",
+        "reason": "The problem involves allocating limited resources (mint, active ingredient, black tar production capacity) to two activities (demonstrations) to maximize an objective (minty foam production). Since all relationships are linear and variables are implicitly continuous (number of demonstrations can be fractional in an LP context), it falls under Linear Programming. The context of a 'science show' performing 'demonstrations' points to the entertainment sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F197",
+    "description": "A fire department employs regular and emergency fire fighters. A regular fire fighter works 10 hours per shift and earns $300. An emergency fire fighter works 6 hours per shift and earns $100. Due to wildfires in the region, the fire department needs at least 300 hours of fire fighter time. If the fire department has a budget of $7000, how many of each should the fire department hire to minimize the total number of fire fighters?",
+    "ground_truth": 40.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Public Services",
+        "reason": "The problem involves allocating a budget and available hours to two types of firefighters to minimize the total number of firefighters, which is a classic resource allocation problem. Given the linear objective and constraints, it can be formulated as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F113",
+    "description": "A neighbourhood pizza restaurant has opened and sells pizzas in two sizes; large pizza and medium pizza. Large pizzas require 12 units of dough, and 5 units of toppings. Medium pizzas require 8 units of dough, and 4 units of toppings. While large pizzas take 12 minutes to bake, medium pizzas require 8 minutes to bake. The neighbourhood pizza restaurant must use at least 10000 units of dough and 4400 units of toppings. Medium pizzas are popular due to a promotion, therefore, at least 200 medium pizzas must be made. There are regulars that prefer large pizzas and at least two times as many large pizzas should be made than medium pizzas. How many of each size of pizzas should the neighbourhood pizza restaurant make to reduce time spent baking?",
+    "ground_truth": 10060.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Production Planning",
+        "modeling_type": "LP",
+        "industry_sector": "Food Service",
+        "reason": "The problem involves determining the optimal quantities of two pizza sizes to produce given resource constraints (dough, toppings, baking time) and demand requirements, which is a classic production planning scenario. The objective is to minimize baking time, and all relationships are linear, making it a Linear Programming problem."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F017",
+    "description": "A pharmacy has 3000 mg of morphine to make painkillers and sleeping pills. Each painkiller pill requires 10 mg of morphine and 3 units of digestive medicine. Each sleeping pill requires 6 mg of morphine and 5 units of digestive medicine. The pharmacy needs to make at least 50 painkiller pills. Since sleeping pills are more popular, at least 70% of the pills should be sleeping pills. How many of each should the pharmacy make to minimize the total amount of digestive medicine needed?",
+    "ground_truth": 735.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating limited resources (morphine) to produce different products (painkillers and sleeping pills) to minimize a cost function (digestive medicine), which is a classic resource allocation problem. The constraints and objective function are linear, making it a Linear Programming problem. The context of a pharmacy making pills clearly places it within the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F212",
+    "description": "A vine company sells vine in vintage and regular bottles. A vintage bottle can hold 500 ml of vine while a regular bottle can hold 750 ml of vine. The company has available 100000 ml of vine. Because vintage bottles are mostly bought by collectors, the number of regular bottles must be at least 4 times as much as the number of vintage bottles. However, at least 10 vintage bottles must be made. How many of each should be made to maximize the total number of bottles produced?",
+    "ground_truth": 142.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Manufacturing",
+        "reason": "The problem involves allocating a limited resource (vine) to produce two types of bottles (vintage and regular) to maximize the total number of bottles, subject to capacity and ratio constraints. This is a classic resource allocation problem that can be formulated as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F200",
+    "description": "A scientist is conducting two experiments to produce electricity, experiment alpha and experiment beta. In experiment alpha, 3 units of metal and 5 units of acid are required to produce 8 units of electricity. In experiment beta, 5 units of metal and 4 units of acid are required to produced 10 units of electricity. The lab has 800 units of metal and 750 units of acid available. How many of each experiment should the scientist conduct to maximize the total amount of electricity produced?",
+    "ground_truth": 1680.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Research & Development",
+        "reason": "The problem involves allocating limited resources (metal and acid) to different activities (experiments alpha and beta) to maximize an objective (total electricity produced). Since all relationships are linear and variables can be fractional, it's a Linear Programming problem. The context of conducting experiments for electricity production falls under Research & Development."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F189",
+    "description": "A laundromat can buy two types of washing machines, a top-loading model and a front-loading model. The top-loading model can wash 50 items per day while the front-loading model can wash 75 items per day. The top-loading model consumes 85 kWh per day while the front-loading model consumes 100 kWh per day. The laundromat must be able to wash at least 5000 items per day and has available 7000 kWh per day. Since the top-loading machine are harder to use, at most 40% of the machines can be top-loading. Further, at least 10 machines should be front-loading. How many of each machine should the laundromat buy to minimize the total number of washing machines?",
+    "ground_truth": 67.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Service",
+        "reason": "The problem involves allocating two types of washing machines to meet demand and resource constraints while minimizing the total number of machines. Since the number of machines must be integers, Integer Programming is the appropriate modeling type. The application is a laundromat, which falls under the service industry."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F055",
+    "description": "A snack exporter sends snacks to his customer in small and large suitcases. A small suitcase can hold 50 snacks while a large suitcase can hold 80 snacks. Most customer prefer small suitcases, and so at least twice as many small suitcases must be used as large suitcases. The exporter has available at most 70 small suitcases and 50 large suitcases. If he must send at least 15 large suitcases and can send  at most 70 suitcases in total, how many of each should he send to maximize the total number of snacks that can be delivered?",
+    "ground_truth": 4190.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Logistics",
+        "reason": "The problem involves allocating available suitcase resources (small and large) to maximize the total number of snacks delivered, subject to various constraints. It can be formulated as a Linear Program because all relationships are linear and variables can be continuous (though in practice, suitcases are discrete, an LP relaxation is often the first step or sufficient if integer solutions naturally arise)."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F020",
+    "description": "A woman eats cashews and almonds to get her calorie and protein intake. A serving of almonds contains 200 calories and 20 grams of protein. A serving of cashews contains 300 calories and 25 grams of protein. The woman decides to eat at least twice as many servings of almonds as cashews. Furthermore, a serving of almonds contains 15 grams of fat while a serving of cashews contains 12 grams of fat. If the woman needs to consume at least 10000 calories and 800 grams of protein this week, how many servings of each should she eat to minimize her fat intake?",
+    "ground_truth": 603.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating servings of almonds and cashews to meet nutritional requirements while minimizing fat intake, which is a classic resource allocation problem. The objective function and all constraints are linear, making it a Linear Programming (LP) problem. The context of calorie, protein, and fat intake for an individual clearly falls under the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F097",
+    "description": "A taco stand sells regular tacos and deluxe tacos with extra meat. The stand makes x1 regular tacos at a profit of $2.50 each and x2 deluxe tacos at a profit of $3.55 each (x1 and x2 are unknown variables both greater than or equal to 0). There is a demand for at most 50 regular tacos and at most 40 deluxe tacos. The stand only has enough supplies to sell at most 70 tacos of either type. How many of each taco should the stand make to maximize profit?",
+    "ground_truth": 217.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves allocating limited resources (supplies) to produce two types of tacos to maximize profit, which is a classic resource allocation problem. The objective function and all constraints are linear, making it a Linear Programming problem. The context of selling tacos at a stand clearly falls under the retail sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F145",
+    "description": "An electronics store wants to optimize how many phones and laptops are enough to keep in inventory. A phone will earn the store $120 in profits, and a laptop will earn $40. A phone requires 1 sq ft of floor space, whereas a laptop requires 4 sq ft. In total, 400 sq ft of floor space is available. The store stocks only phones and laptops. Corporate has required that at least 80% of all appliances in stock be laptops. Finally, a phone costs $400 for the store, and a laptop, $100. The store wants to spend at most $6000. Formulate an LP that can be used to maximize the store's profit.",
+    "ground_truth": 2400.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Inventory Management",
+        "modeling_type": "LP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves determining optimal stock levels for phones and laptops to maximize profit, subject to constraints on floor space, budget, and product mix, which falls under inventory management in a retail setting. The formulation is explicitly stated as a Linear Program (LP)."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F213",
+    "description": "A candy company is making peach flavored candy and cherry flavored candy. Each pack of peach flavored candy requires 3 units of peach flavoring and 5 units of special syrup. Each pack of cherry flavored candy requires 5 units of cherry flavoring and 4 units of special syrup. The company has available 3000 units of peach flavoring and 4000 units of cherry flavoring. Peach candy is much more popular and thus the number of peach candy packs must be larger than the number of cherry candy packs. In addition, at least 30% of the pack must be cherry flavored. How many of each should be made to minimize the total amount of special syrup used?",
+    "ground_truth": 0.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Manufacturing",
+        "reason": "The problem involves allocating limited flavoring resources to produce two types of candy to minimize syrup usage, which is a classic resource allocation problem. The objective and constraints are linear, making it a Linear Programming problem, and the context is candy production, fitting the manufacturing sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F086",
+    "description": "A young boy is trying to grow taller by drinking milk and eating vegetables. He wants to get a minimum of 100 units of calcium and 50 units of iron per day. A glass of milk costs $1 and contains 40 units of calcium and 25 units of iron. A plate of vegetables costs $2 and contains 15 units of calcium and 30 units of iron. How many of each should he consume to minimize his cost?",
+    "ground_truth": 3.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Health",
+        "reason": "The problem involves allocating resources (milk and vegetables) to meet nutritional requirements (calcium and iron) at minimum cost, which is a classic resource allocation problem. Since all relationships are linear (cost, calcium, iron per unit of food), it can be formulated as a Linear Program. The context of meeting nutritional needs for a boy falls under the health sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F048",
+    "description": "A farmer decides to move his cows to a nearby farm using helicopters and trucks. A helicopter can take 3 cows per trip and creates 5 units of pollution. A truck can take 7 cows per trip and creates 10 units of pollution. The farmer needs to transport 80 cows and he only has enough money for at most 8 truck trips. How many of each type of trip should be taken to minimize the total amount of pollution produced?",
+    "ground_truth": 120.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Agriculture",
+        "reason": "The problem involves allocating trips (resources) to transport cows while minimizing pollution, subject to capacity and trip constraints. The decision variables (number of trips) must be integers, making it an Integer Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F147",
+    "description": "A chemical company uses two tests, a salinity test and a pH test. Each unit of the salinity test requires three probes. Whereas each unit of the pH test requires two probes. The chemical company must perform at least 250 pH tests. In total, at least 400 tests must be performed. Further, because of the importance of the salinity test, there must be at most 1.5 times more pH tests than salinity tests. How many times should each test be performed to minimize the total number of probes used?",
+    "ground_truth": 1001.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Manufacturing",
+        "reason": "The problem involves allocating probes to different types of chemical tests to minimize total probe usage, subject to various constraints on the number of tests. This is a classic resource allocation problem that can be formulated as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F120",
+    "description": "A clothing company can sell their product in two types of stores, a retail store and a factory outlet. A retail store brings in 200 customers every day and requires 6 employees to operate. A factory outlet brings in 80 customers every day and due to the lower traffic and being in more remote areas, requires 4 employees to run. Company executives decided that there must be at least 1200 customers every day, and can make available 50 employees. How should the company distribute their product to the two types of store to reduce the number of stores that must be open?",
+    "ground_truth": 6.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves allocating employees and product distribution to two types of stores (retail and factory outlet) to minimize the total number of stores, subject to constraints on customer traffic and available employees. This is a classic resource allocation problem that can be formulated as a Linear Program."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F084",
+    "description": "An appliance company sells and installs refrigerators and stoves. Each refrigerator takes 60 minutes of mover time and 20 minutes of setup time. Each stove takes 45 minutes of mover time and 25 minutes of setup time. The company has available 20000 minutes of mover time and 13000 minutes of setup time. If the profit per refrigerator is $400 and the profit per stove is $260, how many of each should they sell in order to maximize profit?",
+    "ground_truth": 133200.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves allocating limited resources (mover and setup time) to maximize profit from selling two types of appliances (refrigerators and stoves), which is a classic resource allocation problem. The relationships are linear, and variables can be continuous, making it a Linear Programming problem. The context of selling and installing appliances directly relates to the retail sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F204",
+    "description": "Each month a store owner can spend at most $500 on carrots and cucumbers. A carrot costs the store owner $0.30 and a cucumber costs the store owner $0.50. Each carrot is sold for a profit of $0.75 and each cucumber is sold for a profit of $0.80. The owner estimates that the number of cucumbers sold is at most a third of the number of carrots sold. He also estimates that at least 300 carrots but at most 500 carrots are sold each month. How many of each, carrots and cucumbers, should be sold in order to maximize the profit?",
+    "ground_truth": 507.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves allocating a limited budget between two products (carrots and cucumbers) to maximize profit, which is a classic resource allocation problem. The relationships are linear (costs, profits, budget, and quantity constraints), making it suitable for a Linear Programming (LP) model. The context of a store owner selling products clearly places it in the retail sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F101",
+    "description": "The government is reworking the pipes to transport water to houses in the area. The water can be transported through wide pipes or narrow pipes. Wide pipes can transport 25 units of water per minute and narrow pipes can transport 15 units of water per minute. Due to logistics, the number of wide pipes can be at most a third the number of narrow pipes. If there needs to be at least 900 units of water transported every minute, and at least 5 wide pipes must be used, minimize the total number of pipes required.",
+    "ground_truth": 52.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Utilities",
+        "reason": "The problem involves allocating two types of pipes (resources) to meet a water transportation demand while minimizing the total number of pipes, subject to various constraints. Since the number of pipes must be integers, Integer Programming is the appropriate modeling type. The application is clearly within the water utility sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F146",
+    "description": "A daycare center has children they must pick up and can use two types of vehicles: bus or a personal car. A bus can carry 9 children while a personal car can carry 4 children. The daycare has to pick up at least 100 children. Additionally, due to limitations of pollution, there must be more buses than personal cars. But some children require extra attention. Therefore, there must be at least 5 personal cars. How many of each form of transportation should the daycare center schedule for to minimize the total number of vehicles?",
+    "ground_truth": 14.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Education",
+        "reason": "The problem involves allocating two types of vehicles (resources) to pick up children, subject to capacity and policy constraints, with the objective of minimizing the total number of vehicles. Since the number of vehicles must be integers, Integer Programming is the appropriate modeling type. The application is clearly within an educational setting (daycare center)."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F132",
+    "description": "A golf course is hosting an event and can transport guests using either golf carts or pull carts. A golf cart can take 4 guests while a pull cart can take 1 guest. Since golf carts take up a lot of space, at most 60% of carts can be golf carts. If the golf course needs to transport at least 80 guests, how many of each cart should be used to minimize the total number of carts needed?",
+    "ground_truth": 29.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "IP",
+        "industry_sector": "Recreation & Hospitality",
+        "reason": "The problem involves allocating two types of carts (resources) to transport guests, subject to capacity and proportion constraints, with the objective of minimizing the total number of carts. Since the number of carts must be integers, Integer Programming is appropriate. The application is clearly within a golf course setting."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F151",
+    "description": "A candy store mixes regular candy and sour candy to prepare two products, regular mix and sour surprise mix. Each kilogram of the regular mix contains 0.8 kg of regular candy and 0.2 kg of sour candy. The profit per kilogram of the regular mix is $3. Each kilogram of the sour surprise mix contains 0.1 kg of regular candy and 0.9 kg of sour candy. The profit per kilogram of the sour surprise mix is $5. The candy store has 80 kg of regular candy and 60 kg of sour candy available. How many kilograms of each type of candy mix should be created to maximize profits?",
+    "ground_truth": 511.428572,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Blending",
+        "modeling_type": "LP",
+        "industry_sector": "Retail",
+        "reason": "The problem involves mixing different types of candy to create new products, which is a classic blending problem. The objective is to maximize profit subject to linear constraints on available candy, making it a Linear Programming problem. The application is in a candy store, which falls under the retail sector."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F003",
+    "description": "A summer camps does science experiments in two pre filled beakers, beaker 1 and beaker 2. Beaker 1 uses 4 units of flour and 6 units of special liquid to make 5 units of slime. Beaker 2 uses 6 units of flour and 3 units of special liquid to make 3 units of slime.  However, beaker 1 creates 4 units of waste while beaker 2 creates 2 units of waste. The summer camp has available 150 units of flour and 100 units of special liquid. If at most 30 units of waste can be produced, how many of each beaker should be used to maximize the amount of slime produced?",
+    "ground_truth": 45.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Education",
+        "reason": "The problem involves allocating limited resources (flour, special liquid, waste capacity) to two activities (using beaker 1 or beaker 2) to maximize an objective (total slime produced). This is a classic resource allocation problem that can be formulated as a Linear Program because all relationships are linear."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F208",
+    "description": "There are two chemical reactions, chemical reaction A and chemical reaction B. Chemical reaction A requires 5 units of rare inert gas and 6 units of treated water to produce 10 units of a rare compound. Chemical reaction B requires 7 units of rare inert gas and 3 units of treater water to produce 8 units of a rare compound. There are 1000 units of the rare inert gas and 800 units of treated water available in the lab. How many reactions of each type should be done to maximize the amount of rare compound produced?",
+    "ground_truth": 1552.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Chemical Manufacturing",
+        "reason": "The problem involves allocating limited resources (rare inert gas and treated water) to maximize the output (rare compound) from two production processes (chemical reactions A and B). This is a classic resource allocation problem that can be formulated as a Linear Program because all relationships are linear."
+      }
+    ],
+    "cluster": null
+  },
+  {
+    "task_id": "F095",
+    "description": "A repairman fixes washing machines and freezers. Each washing machine takes 30 minutes of inspection and 90 minutes of fixing time. Each freezer takes 20 minutes of inspection and 125 minutes of fixing time. The repairman has 5000 minutes available for inspection and 20000 minutes available in his schedule. If each washing machine repaired earns him $250 and each freezer repaired earns his $375, how many of each appliance should he fix to maximize his earnings?",
+    "ground_truth": 60000.0,
+    "formulation": null,
+    "correct_program": null,
+    "output_status": [],
+    "success_count": 0,
+    "success_confidence": 0,
+    "fail_to_diagnose": 0,
+    "fail_to_verify": 0,
+    "retrieved_insights": [],
+    "tag": [
+      {
+        "problem_domain": "Resource Allocation",
+        "modeling_type": "LP",
+        "industry_sector": "Services",
+        "reason": "The problem involves allocating limited resources (inspection and fixing time) to different activities (repairing washing machines and freezers) to maximize a single objective (earnings). This is a classic linear programming problem as all relationships are linear."
+      }
+    ],
+    "cluster": null
+  }
+]
