@@ -120,8 +120,8 @@ If our work contributes to your research, we would greatly appreciate it if you 
 @article{kong2025alphaopt,
   title={AlphaOPT: Formulating Optimization Programs with Self-Improving LLM Experience Library},
   author={Kong, Mingwei and Qu, Ao and Guo, Xiaotong and Ouyang, Weibin and Jiang, Chuhan and Zheng, Hao and Ma, Yining and Zhuang, Dingyi and Tang, Yihong and Li, Jinyu and Wang, Hao and Wu, Chen and Zhao, Jinhua},
-  journal={arXiv preprint arXiv:1111.11111},
+  journal={arXiv preprint arXiv:2510.18428},
   year={2025},
-  url={https://arxiv.org/abs/1111.11111}
+  url={https://arxiv.org/abs/2510.18428}
 }
 ```
